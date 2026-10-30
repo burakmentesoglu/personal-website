@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" fill="none">
+  <!-- Radiating RF Waves -->
+  <path d="M56 26 A28 28 0 0 0 56 62" stroke="#163C66" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 18 A40 40 0 0 0 44 70" stroke="#2589BD" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M104 26 A28 28 0 0 1 104 62" stroke="#163C66" stroke-width="4" stroke-linecap="round"/>
+  <path d="M116 18 A40 40 0 0 1 116 70" stroke="#2589BD" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Central Antenna Mast & Node -->
+  <circle cx="80" cy="42" r="7" fill="#163C66"/>
+  <path d="M80 49 L68 76 H92 Z" fill="#163C66"/>
+  <text x="80" y="93" fill="#163C66" font-family="sans-serif" font-weight="700" font-size="12" letter-spacing="1.2" text-anchor="middle">BOUNTENNA</text>
+</svg>

@@ -1,6 +1,8 @@
 # Reference assets, templates & local source files
 *.zip
 *.png
+!assets/*.png
+!assets/*.svg
 *.tex
 lil-me/
 parallax-depth-cards/
