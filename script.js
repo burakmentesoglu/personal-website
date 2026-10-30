@@ -166,26 +166,58 @@
   }
 
   /* ------------------------------------------------------------------------
-     4. STEAMING HOT DRINK MICRO-INTERACTION (BOTTOM OF CENTRAL COLUMN)
+     4. KYLIE-STYLE TYPEWRITER & DOCUMENT BACKSPACE HEADER EFFECT
+     "Hello, I'm Burak Menteşoğlu" -> deletes -> "an engineer and scientist" -> deletes -> "a cat lover"
      ------------------------------------------------------------------------ */
-  const teaWidget = document.getElementById('steaming-tea-widget');
-  const teaLabel = document.getElementById('tea-sip-label');
-  const teaStates = ['68°C', 'sip 🍵', '65°C', 'warm ✨', '70°C'];
-  let teaIdx = 0;
+  const typedTextEl = document.getElementById('typed-text');
+  const typedCursorEl = document.querySelector('.typed-cursor');
+  const typedPhrases = [
+    'Burak Menteşoğlu',
+    'an engineer and scientist',
+    'a cat lover'
+  ];
 
-  if (teaWidget) {
-    const handleTeaSip = () => {
-      teaIdx = (teaIdx + 1) % teaStates.length;
-      if (teaLabel) teaLabel.textContent = teaStates[teaIdx];
-      audio.playCardFlip();
-    };
-    teaWidget.addEventListener('click', handleTeaSip);
-    teaWidget.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        handleTeaSip();
+  if (typedTextEl) {
+    let phraseIndex = 0;
+    let charIndex = typedPhrases[0].length;
+    let isDeleting = true;
+
+    function stepTypewriter() {
+      const currentPhrase = typedPhrases[phraseIndex];
+
+      if (isDeleting) {
+        charIndex--;
+        typedTextEl.textContent = currentPhrase.substring(0, charIndex);
+        if (typedCursorEl) typedCursorEl.classList.add('is-typing');
+
+        if (charIndex <= 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % typedPhrases.length;
+          if (typedCursorEl) typedCursorEl.classList.remove('is-typing');
+          setTimeout(stepTypewriter, 360);
+        } else {
+          // Word-like backspace speed
+          setTimeout(stepTypewriter, 48 + Math.random() * 22);
+        }
+      } else {
+        charIndex++;
+        typedTextEl.textContent = currentPhrase.substring(0, charIndex);
+        if (typedCursorEl) typedCursorEl.classList.add('is-typing');
+
+        if (charIndex >= currentPhrase.length) {
+          isDeleting = true;
+          if (typedCursorEl) typedCursorEl.classList.remove('is-typing');
+          // Pause while full phrase is displayed before backspacing
+          setTimeout(stepTypewriter, phraseIndex === 0 ? 2200 : 1750);
+        } else {
+          // Natural typing cadence
+          setTimeout(stepTypewriter, 75 + Math.random() * 35);
+        }
       }
-    });
+    }
+
+    // Start backspacing "Burak Menteşoğlu" after initial page reveal
+    setTimeout(stepTypewriter, 2200);
   }
 
   /* ------------------------------------------------------------------------
@@ -198,8 +230,8 @@
   const tabMessages = {
     about: 'welcome! here is my minimalist overview 🌸',
     projects: 'hover any polaroid to tilt in 3d, or click to flip 180°!',
-    playground: 'try the cozy switches & inspect my engineering stack ⚡',
-    contact: 'feel free to reach out anytime over warm tea 🍵'
+    resume: 'here is my education & research experience timeline 📄',
+    contact: 'feel free to reach out anytime ✨'
   };
 
   function switchTab(targetTab, announceCompanion = true) {
@@ -248,7 +280,7 @@
 
   // Load initial hash tab if provided
   const initialHash = window.location.hash.replace('#', '').trim().toLowerCase();
-  if (['about', 'projects', 'playground', 'contact'].includes(initialHash)) {
+  if (['about', 'projects', 'resume', 'contact'].includes(initialHash)) {
     switchTab(initialHash, false);
   }
 
@@ -534,39 +566,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     8. PLAYGROUND TAB BUTTON HOOKS
-     ------------------------------------------------------------------------ */
-  const pgRingBtn = document.getElementById('pg-ring-chime');
-  const pgGustBtn = document.getElementById('pg-breeze-gust');
-  const pgToggleLilMe = document.getElementById('pg-toggle-lilme');
-  const pgDizzyLilMe = document.getElementById('pg-dizzy-lilme');
-
-  if (pgRingBtn) pgRingBtn.addEventListener('click', triggerWindChime);
-  if (pgGustBtn) {
-    pgGustBtn.addEventListener('click', () => {
-      windGustBoost = 3.8;
-      audio.playWindChime();
-    });
-  }
-  if (pgToggleLilMe) {
-    pgToggleLilMe.addEventListener('click', () => {
-      if (!lilMeDock) return;
-      const nowHidden = lilMeDock.classList.toggle('is-peeking');
-      if (nowHidden) playLilMeEntrance();
-    });
-  }
-  if (pgDizzyLilMe) {
-    pgDizzyLilMe.addEventListener('click', () => {
-      revealLilMeWithMessage('spinning my glasses! 🌀');
-      if (dizzyTl && !dizzyPlaying) {
-        dizzyPlaying = true;
-        dizzyTl.restart();
-      }
-    });
-  }
-
-  /* ------------------------------------------------------------------------
-     10. FLOATING SAKURA PETALS & WARM PARALLAX DUST CANVAS
+     8. FLOATING SAKURA PETALS & WARM PARALLAX DUST CANVAS
      ------------------------------------------------------------------------ */
   const canvas = document.getElementById('sakura-canvas');
   if (canvas) {

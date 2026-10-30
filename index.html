@@ -233,16 +233,18 @@
   <div class="viewport-stage">
     <main class="central-column" aria-live="polite">
 
-      <!-- HEADER: Elegant Serif Name & Minimal Horizontal Navigation -->
+      <!-- HEADER: Kylie-Style Typewriter Greeting & Minimal Horizontal Navigation -->
       <header class="column-header">
         <h1 class="site-name reveal-item reveal-delay-1">
-          <a href="#about" data-tab-target="about">Burak Menteşoğlu</a>
+          <a href="#about" data-tab-target="about" class="typed-header-link">
+            <span class="typed-prefix">Hello, I'm </span><span id="typed-text" class="typed-dynamic">Burak Menteşoğlu</span><span class="typed-cursor" aria-hidden="true">|</span>
+          </a>
         </h1>
 
         <nav class="minimal-nav reveal-item reveal-delay-2" aria-label="Primary Navigation">
           <button type="button" class="nav-tab-link is-active" data-tab="about" aria-selected="true">about</button>
           <button type="button" class="nav-tab-link" data-tab="projects" aria-selected="false">projects</button>
-          <button type="button" class="nav-tab-link" data-tab="playground" aria-selected="false">playground</button>
+          <button type="button" class="nav-tab-link" data-tab="resume" aria-selected="false">resume</button>
           <button type="button" class="nav-tab-link" data-tab="contact" aria-selected="false">contact</button>
         </nav>
 
@@ -622,59 +624,87 @@
         </section>
 
         <!-- ==================================================================
-             TAB 3: PLAYGROUND (INTERACTIVE COZY AMBIANCE & TECHNICAL TOOLKIT)
+             TAB 3: RESUME (KYLIE YING STYLE: EDUCATION & EXPERIENCE ROWS)
              ================================================================== -->
         <section
-          id="tab-playground"
+          id="tab-resume"
           class="tab-panel"
           role="tabpanel"
-          aria-label="playground"
+          aria-label="resume"
           hidden
         >
-          <p class="panel-micro-note">
-            tactile cozy switches &amp; engineering toolkit
-          </p>
+          <div class="resume-header-row">
+            <h2 class="resume-section-label">Education</h2>
+            <a href="./BurakMentesogluResume.pdf" target="_blank" rel="noopener" class="resume-pdf-link">full pdf ↗</a>
+          </div>
 
-          <!-- Interactive Micro-Controls Strip -->
-          <div class="playground-controls-box">
-            <div class="playground-row">
-              <span class="playground-label">🎐 wind chime (fūrin)</span>
-              <div class="playground-actions">
-                <button type="button" class="micro-action-btn" id="pg-ring-chime">ring chime</button>
-                <button type="button" class="micro-action-btn" id="pg-breeze-gust">sakura gust 🌸</button>
+          <div class="resume-list">
+            <!-- Boğaziçi University -->
+            <div class="resume-row">
+              <div class="resume-logo resume-logo--boun" aria-hidden="true">
+                <span class="logo-monogram">BOÜN</span>
+              </div>
+              <div class="resume-item">
+                <h3>Boğaziçi University</h3>
+                <p>M.Sc. in Computer Engineering</p>
+                <span class="resume-date">2026 – Present</span>
               </div>
             </div>
 
-            <div class="playground-row">
-              <span class="playground-label">👓 lil’ burak companion</span>
-              <div class="playground-actions">
-                <button type="button" class="micro-action-btn" id="pg-toggle-lilme">peek / hide</button>
-                <button type="button" class="micro-action-btn" id="pg-dizzy-lilme">spin glasses 🌀</button>
+            <!-- Istanbul Technical University -->
+            <div class="resume-row">
+              <div class="resume-logo resume-logo--itu" aria-hidden="true">
+                <span class="logo-monogram">İTÜ</span>
+              </div>
+              <div class="resume-item">
+                <h3>Istanbul Technical University</h3>
+                <p>B.Sc. in Electronics and Communication Engineering</p>
+                <span class="resume-date">2022 – 2026</span>
               </div>
             </div>
           </div>
 
-          <!-- Minimalist Technical Stack Breakdown -->
-          <ul class="minimal-bio-list compact-stack-list">
-            <li class="bio-item">
-              <div class="bio-line">
-                <span class="bullet-dot">•</span>
-                <span><strong>languages &amp; hdl:</strong> <span class="accent-oak">Python</span>, <span class="accent-oak">C++</span>, C, SQL, Bash, MATLAB, <span class="accent-sage">Verilog</span>, <span class="accent-sage">SystemVerilog</span></span>
+          <div class="resume-header-row resume-header-row--spaced">
+            <h2 class="resume-section-label">Experience</h2>
+          </div>
+
+          <div class="resume-list">
+            <!-- ITU Quantum Systems and Security Laboratory -->
+            <div class="resume-row">
+              <div class="resume-logo resume-logo--quantum" aria-hidden="true">
+                <span class="logo-monogram">QSL</span>
               </div>
-            </li>
-            <li class="bio-item">
-              <div class="bio-line">
-                <span class="bullet-dot">•</span>
-                <span><strong>ai &amp; data systems:</strong> <span class="accent-rose">PyTorch</span>, Scikit-learn, TensorFlow, Pandas, NumPy, SciPy, Automated ETL</span>
+              <div class="resume-item">
+                <h3>ITU Quantum Systems and Security Laboratory</h3>
+                <p>Undergraduate Researcher — Software Pipelines &amp; Data Systems</p>
+                <span class="resume-date">2026 – Present</span>
               </div>
-            </li>
-            <li class="bio-item">
-              <div class="bio-line">
-                <span class="bullet-dot">•</span>
-                <span><strong>hardware &amp; devops:</strong> <span class="accent-sage">RISC-V</span>, RTL Synthesis, FPGA, ESP32, Linux/Unix, Docker, Git</span>
+            </div>
+
+            <!-- Boğaziçi University BOUNTENNA Laboratory -->
+            <div class="resume-row">
+              <div class="resume-logo resume-logo--bountenna" aria-hidden="true">
+                <span class="logo-monogram">RF</span>
               </div>
-            </li>
-          </ul>
+              <div class="resume-item">
+                <h3>Boğaziçi University BOUNTENNA Laboratory</h3>
+                <p>Research Intern — Engineering Simulation &amp; Data Analysis</p>
+                <span class="resume-date">Jan 2026 – Feb 2026</span>
+              </div>
+            </div>
+
+            <!-- TÜBİTAK BİLGEM -->
+            <div class="resume-row">
+              <div class="resume-logo resume-logo--tubitak" aria-hidden="true">
+                <span class="logo-monogram">BİLGEM</span>
+              </div>
+              <div class="resume-item">
+                <h3>TÜBİTAK BİLGEM</h3>
+                <p>Digital Design Engineering Intern</p>
+                <span class="resume-date">Jul 2025 – Aug 2025</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- ==================================================================
@@ -744,7 +774,7 @@
 
       <!-- ====================================================================
            PERSISTENT COLUMN FOOTER:
-           Side-by-Side Minimal Social Links + Steaming Hot Drink Cup (#4)
+           Side-by-Side Minimal Social Links
            ==================================================================== -->
       <footer class="column-footer reveal-item reveal-delay-5">
         <div class="footer-links-row">
@@ -755,35 +785,6 @@
           <a href="https://www.linkedin.com/in/burak-mentesoglu" target="_blank" rel="noopener" class="minimal-social-link">linkedin</a>
           <span class="footer-sep" aria-hidden="true">/</span>
           <a href="./BurakMentesogluResume.pdf" target="_blank" rel="noopener" class="minimal-social-link">cv</a>
-        </div>
-
-        <!-- KEY FEATURE 4: STEAMING HOT DRINK RIGHT BESIDE FOOTER LINKS / SIGNATURE -->
-        <div
-          id="steaming-tea-widget"
-          class="steaming-cup-inline"
-          role="button"
-          tabindex="0"
-          aria-label="Steaming cup of warm matcha tea — Click for a warm sip"
-          title="Freshly brewed warm tea (click for a sip)"
-        >
-          <svg class="inline-cup-svg" viewBox="0 0 68 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Continuous Rising Thin Steam Wisps -->
-            <path class="steam-wisp steam-wisp--1" d="M24,22 C21,15 28,10 24,3" />
-            <path class="steam-wisp steam-wisp--2" d="M33,20 C36,12 29,7 33,1" />
-            <path class="steam-wisp steam-wisp--3" d="M42,22 C39,15 45,10 41,3" />
-            <!-- Warm Oak Wooden Coaster -->
-            <ellipse cx="33" cy="54" rx="22" ry="4.5" fill="#DEB892" stroke="#725344" stroke-width="1.4" />
-            <!-- Mug Handle -->
-            <path d="M48,31 C56,31 56,45 47,45" stroke="#FAF8F5" stroke-width="3.5" stroke-linecap="round" />
-            <!-- Ceramic Mug Body -->
-            <path d="M17,26 L49,26 L46,47 C45,52 40,54 33,54 C26,54 21,52 20,47 Z" fill="#FAF8F5" stroke="#9E7662" stroke-width="1.6" />
-            <!-- Pastel Sage Band -->
-            <path d="M19,41 L47,41 L46,47 C45,52 40,54 33,54 C26,54 21,52 20,47 Z" fill="#B7BFA8" opacity="0.85" />
-            <!-- Warm Tea / Coffee Rim -->
-            <ellipse cx="33" cy="26" rx="16" ry="4" fill="#E8DFD1" stroke="#9E7662" stroke-width="1.4" />
-            <ellipse cx="33" cy="26.5" rx="13.5" ry="2.6" fill="#88A47C" />
-          </svg>
-          <span id="tea-sip-label" class="cup-micro-status">68°C</span>
         </div>
       </footer>
 
