@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burak Menteşoğlu</title>
+  <meta name="description" content="Burak Menteşoğlu — M.Sc. in Computer Engineering at Boğaziçi University &amp; B.Sc. in Electronics and Communication Engineering at ITU. Software pipelines, AI/ML &amp; digital hardware." />
+
+  <!-- Google Fonts: Cormorant Garamond / Fraunces (Elegant Serif Header), Inter / Plus Jakarta Sans (Clean Body), JetBrains Mono (Minimal Tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. BLUE HOUR SKY & AURORA HORIZON BACKDROP
+       Prussian Blue (#1C355E) -> Slate Blue (#3C5A78) + Subtle Aurora Teal (#38B899 / #43E8D8)
+       ======================================================================== -->
+  <div class="blue-hour-backdrop" aria-hidden="true">
+    <div class="aurora-glow aurora-glow--1"></div>
+    <div class="aurora-glow aurora-glow--2"></div>
+    <div class="aurora-glow aurora-glow--3"></div>
+
+    <!-- Subtle Distant Starfield -->
+    <svg class="starfield-layer" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <g fill="#FAF8F5">
+        <circle class="star-dot" cx="160" cy="110" r="1.2" />
+        <circle class="star-dot star-dot--slow" cx="310" cy="75" r="1.5" fill="#43E8D8" />
+        <circle class="star-dot" cx="520" cy="130" r="1.1" />
+        <circle class="star-dot star-dot--slow" cx="780" cy="64" r="1.4" />
+        <circle class="star-dot" cx="1040" cy="96" r="1.6" fill="#FFE3E5" />
+        <circle class="star-dot star-dot--slow" cx="1260" cy="142" r="1.2" />
+        <circle class="star-dot" cx="210" cy="340" r="1.1" />
+        <circle class="star-dot star-dot--slow" cx="1290" cy="380" r="1.4" fill="#43E8D8" />
+        <circle class="star-dot" cx="140" cy="620" r="1.2" />
+        <circle class="star-dot star-dot--slow" cx="1180" cy="680" r="1.1" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       2. ATMOSPHERIC CORNER SAKURA BRANCHES (TOP-LEFT & BOTTOM-RIGHT)
+       Placed at the exact corner positions of the reference layout, never blocking central text.
+       Branches: #725344, #9E7662 | Blossoms: #FFE3E5, #F9B4B7, #F2797B
+       ======================================================================== -->
+  <!-- TOP-LEFT SAKURA BOUGH -->
+  <div class="sakura-corner sakura-corner--top-left" aria-hidden="true">
+    <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="petal-glow-tl" x="-25%" y="-25%" width="150%" height="150%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Main Top-Left Woody Boughs -->
+      <path d="M-18,16 C85,32 175,64 275,112 C335,140 385,158 430,172" stroke="#725344" stroke-width="11" stroke-linecap="round" />
+      <path d="M-12,12 C88,28 178,60 278,108 C332,134 380,152 422,166" stroke="#9E7662" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
+      <path d="M-14,88 C64,104 132,132 198,176 C244,206 282,238 318,266" stroke="#725344" stroke-width="8" stroke-linecap="round" />
+      <!-- Secondary Twigs -->
+      <path d="M135,52 C168,96 202,132 248,162" stroke="#9E7662" stroke-width="5" stroke-linecap="round" />
+      <path d="M225,90 C272,68 320,56 374,62" stroke="#725344" stroke-width="5" stroke-linecap="round" />
+      <path d="M96,116 C86,164 76,208 58,248" stroke="#725344" stroke-width="5" stroke-linecap="round" />
+      <path d="M178,162 C166,208 154,246 132,282" stroke="#9E7662" stroke-width="4" stroke-linecap="round" />
+      <path d="M275,112 C288,158 302,198 322,232" stroke="#725344" stroke-width="4.5" stroke-linecap="round" />
+
+      <!-- Glowing Pastel Sakura Clusters -->
+      <g filter="url(#petal-glow-tl)">
+        <!-- Cluster A -->
+        <circle cx="88" cy="40" r="22" fill="#FFE3E5" opacity="0.92" />
+        <circle cx="116" cy="54" r="17" fill="#F9B4B7" opacity="0.88" />
+        <circle cx="66" cy="52" r="15" fill="#FFE3E5" opacity="0.86" />
+        <circle cx="86" cy="42" r="5" fill="#F2797B" />
+        <!-- Cluster B -->
+        <circle cx="238" cy="96" r="24" fill="#FFE3E5" opacity="0.92" />
+        <circle cx="268" cy="110" r="18" fill="#F9B4B7" opacity="0.88" />
+        <circle cx="212" cy="108" r="16" fill="#FFE3E5" opacity="0.85" />
+        <circle cx="236" cy="98" r="5.5" fill="#F2797B" />
+        <!-- Cluster C -->
+        <circle cx="362" cy="62" r="19" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="384" cy="70" r="14" fill="#F9B4B7" opacity="0.86" />
+        <circle cx="358" cy="64" r="4.5" fill="#F2797B" />
+        <!-- Cluster D -->
+        <circle cx="416" cy="168" r="20" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="394" cy="178" r="15" fill="#F9B4B7" opacity="0.86" />
+        <circle cx="436" cy="176" r="13" fill="#FFE3E5" opacity="0.84" />
+        <circle cx="414" cy="170" r="4.5" fill="#F2797B" />
+        <!-- Cluster E -->
+        <circle cx="242" cy="158" r="19" fill="#FFE3E5" opacity="0.88" />
+        <circle cx="222" cy="168" r="14" fill="#F9B4B7" opacity="0.84" />
+        <circle cx="316" cy="228" r="18" fill="#FFE3E5" opacity="0.88" />
+        <circle cx="298" cy="238" r="14" fill="#F9B4B7" opacity="0.84" />
+        <!-- Cluster F -->
+        <circle cx="312" cy="262" r="20" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="292" cy="272" r="15" fill="#F9B4B7" opacity="0.85" />
+        <circle cx="62" cy="242" r="19" fill="#FFE3E5" opacity="0.88" />
+        <circle cx="44" cy="254" r="14" fill="#F9B4B7" opacity="0.84" />
+        <circle cx="136" cy="276" r="17" fill="#FFE3E5" opacity="0.86" />
+        <circle cx="118" cy="286" r="13" fill="#F9B4B7" opacity="0.82" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- BOTTOM-RIGHT SAKURA BOUGH -->
+  <div class="sakura-corner sakura-corner--bottom-right" aria-hidden="true">
+    <svg viewBox="0 0 540 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="petal-glow-br" x="-25%" y="-25%" width="150%" height="150%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Main Bottom-Right Woody Boughs Growing Inward & Upward -->
+      <path d="M555,368 C450,348 355,310 255,256 C190,220 135,196 82,178" stroke="#725344" stroke-width="11.5" stroke-linecap="round" />
+      <path d="M550,372 C448,352 352,314 252,260 C192,226 140,202 90,184" stroke="#9E7662" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
+      <path d="M552,286 C472,268 398,236 332,188 C282,152 242,118 204,86" stroke="#725344" stroke-width="8.5" stroke-linecap="round" />
+      <!-- Secondary Twigs -->
+      <path d="M395,326 C358,278 322,238 272,204" stroke="#9E7662" stroke-width="5" stroke-linecap="round" />
+      <path d="M302,282 C252,306 198,318 142,312" stroke="#725344" stroke-width="5" stroke-linecap="round" />
+      <path d="M438,256 C448,204 458,158 478,114" stroke="#725344" stroke-width="5" stroke-linecap="round" />
+      <path d="M352,204 C366,154 378,114 402,76" stroke="#9E7662" stroke-width="4.2" stroke-linecap="round" />
+      <path d="M255,256 C240,206 226,164 202,126" stroke="#725344" stroke-width="4.5" stroke-linecap="round" />
+
+      <!-- Glowing Pastel Sakura Clusters -->
+      <g filter="url(#petal-glow-br)">
+        <!-- Cluster 1 -->
+        <circle cx="446" cy="340" r="23" fill="#FFE3E5" opacity="0.92" />
+        <circle cx="416" cy="324" r="18" fill="#F9B4B7" opacity="0.88" />
+        <circle cx="472" cy="328" r="16" fill="#FFE3E5" opacity="0.86" />
+        <circle cx="448" cy="338" r="5" fill="#F2797B" />
+        <!-- Cluster 2 -->
+        <circle cx="288" cy="274" r="24" fill="#FFE3E5" opacity="0.92" />
+        <circle cx="258" cy="258" r="18" fill="#F9B4B7" opacity="0.88" />
+        <circle cx="316" cy="262" r="16" fill="#FFE3E5" opacity="0.85" />
+        <circle cx="290" cy="272" r="5.5" fill="#F2797B" />
+        <!-- Cluster 3 -->
+        <circle cx="154" cy="312" r="19" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="132" cy="304" r="14" fill="#F9B4B7" opacity="0.86" />
+        <circle cx="158" cy="310" r="4.5" fill="#F2797B" />
+        <!-- Cluster 4 -->
+        <circle cx="96" cy="182" r="20" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="120" cy="172" r="15" fill="#F9B4B7" opacity="0.86" />
+        <circle cx="76" cy="174" r="13" fill="#FFE3E5" opacity="0.84" />
+        <circle cx="98" cy="180" r="4.5" fill="#F2797B" />
+        <!-- Cluster 5 -->
+        <circle cx="208" cy="92" r="20" fill="#FFE3E5" opacity="0.9" />
+        <circle cx="228" cy="82" r="15" fill="#F9B4B7" opacity="0.85" />
+        <circle cx="206" cy="130" r="18" fill="#FFE3E5" opacity="0.88" />
+        <circle cx="224" cy="120" r="14" fill="#F9B4B7" opacity="0.84" />
+        <!-- Cluster 6 -->
+        <circle cx="474" cy="120" r="19" fill="#FFE3E5" opacity="0.88" />
+        <circle cx="492" cy="108" r="14" fill="#F9B4B7" opacity="0.84" />
+        <circle cx="398" cy="82" r="17" fill="#FFE3E5" opacity="0.86" />
+        <circle cx="416" cy="72" r="13" fill="#F9B4B7" opacity="0.82" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- ========================================================================
+       3. FLOATING SAKURA PETALS & WARM PARALLAX DUST CANVAS
+       ======================================================================== -->
+  <canvas id="sakura-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       4. INTERACTIVE WIND CHIME (FŪRIN) — HANGING FROM TOP-LEFT SAKURA BRANCH
+       With soothing Web Audio chime & accessible Mute/Unmute button
+       ======================================================================== -->
+  <div class="furin-corner-dock reveal-item reveal-delay-1">
+    <div
+      id="furin-chime"
+      class="furin-widget"
+      role="button"
+      tabindex="0"
+      aria-label="Ring the Japanese wind chime (Fūrin)"
+      title="Hover or click to ring the wind chime"
+    >
+      <div class="furin-ripple"></div>
+      <svg class="furin-svg" viewBox="0 0 72 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g class="furin-bell-group">
+          <!-- Silk Cord from Sakura Branch -->
+          <line x1="36" y1="0" x2="36" y2="24" stroke="#DFB1A5" stroke-width="2" stroke-linecap="round" />
+          <circle cx="36" cy="24" r="3" fill="#725344" />
+          <!-- Glass Fūrin Bell -->
+          <path
+            d="M15,49 C15,33 24,24 36,24 C48,24 57,33 57,49 C57,56 55,61 52,64 L20,64 C17,61 15,56 15,49 Z"
+            fill="rgba(255, 227, 229, 0.28)"
+            stroke="#FFE3E5"
+            stroke-width="1.8"
+          />
+          <!-- Painted Sakura Blossom on Glass -->
+          <circle cx="29" cy="44" r="4.5" fill="#F9B4B7" opacity="0.85" />
+          <circle cx="34" cy="48" r="3.5" fill="#FFE3E5" opacity="0.9" />
+          <circle cx="44" cy="41" r="3" fill="#43E8D8" opacity="0.65" />
+          <path d="M22,34 C19,39 18,46 19,53" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0.6" />
+          <!-- Clapper & String -->
+          <line x1="36" y1="26" x2="36" y2="84" stroke="#DEB892" stroke-width="1.5" />
+          <circle cx="36" cy="61" r="4" fill="#9E7662" />
+          <!-- Swaying Tanzaku Paper Slip -->
+          <g class="furin-tanzaku">
+            <rect x="24" y="82" width="24" height="78" rx="3" fill="#FAF8F5" stroke="#DEB892" stroke-width="1.6" />
+            <path d="M25,126 Q36,118 47,128 L47,158 L25,158 Z" fill="#FFE3E5" opacity="0.75" />
+            <circle cx="36" cy="100" r="4" fill="#F9B4B7" opacity="0.85" />
+            <circle cx="36" cy="140" r="2.8" fill="#F2797B" opacity="0.75" />
+            <line x1="36" y1="110" x2="36" y2="130" stroke="#9E7662" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <button
+      id="audio-mute-toggle"
+      class="corner-micro-btn"
+      type="button"
+      aria-pressed="false"
+      title="Mute or unmute ambient chime sounds"
+    >
+      <span id="audio-mute-icon" aria-hidden="true">🔔</span>
+      <span id="audio-mute-label">chime on</span>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       5. ULTRA-MINIMALIST CENTRAL TEXT COLUMN (MAX-WIDTH: 580PX)
+       Exact structure of the final reference image:
+       - Serif Name Title
+       - Horizontal Minimal Nav Links (about, projects, playground, contact)
+       - Thin Divider (<hr>)
+       - Tabbed Content Area with smooth fade transition
+       - Persistent Bottom Row: Minimal Social Links + Steaming Hot Drink Cup
+       ======================================================================== -->
+  <div class="viewport-stage">
+    <main class="central-column" aria-live="polite">
+
+      <!-- HEADER: Elegant Serif Name & Minimal Horizontal Navigation -->
+      <header class="column-header">
+        <h1 class="site-name reveal-item reveal-delay-1">
+          <a href="#about" data-tab-target="about">Burak Menteşoğlu</a>
+        </h1>
+
+        <nav class="minimal-nav reveal-item reveal-delay-2" aria-label="Primary Navigation">
+          <button type="button" class="nav-tab-link is-active" data-tab="about" aria-selected="true">about</button>
+          <button type="button" class="nav-tab-link" data-tab="projects" aria-selected="false">projects</button>
+          <button type="button" class="nav-tab-link" data-tab="playground" aria-selected="false">playground</button>
+          <button type="button" class="nav-tab-link" data-tab="contact" aria-selected="false">contact</button>
+        </nav>
+
+        <hr class="minimal-hr reveal-item reveal-delay-2" />
+      </header>
+
+      <!-- ====================================================================
+           TAB PANELS CONTAINER (SMOOTH FADE TRANSITION, NO LONG SCROLL)
+           ==================================================================== -->
+      <div class="tab-panels-stage">
+
+        <!-- ==================================================================
+             TAB 1: ABOUT (DEFAULT VIEW — EXACT ULTRA-MINIMALIST REFERENCE LAYOUT)
+             Simple bullets, inline favicons/badges, indented ↳ sub-items
+             ================================================================== -->
+        <section
+          id="tab-about"
+          class="tab-panel is-active"
+          role="tabpanel"
+          aria-label="about"
+        >
+          <ul class="minimal-bio-list">
+            <!-- Bullet 1: Education -->
+            <li class="bio-item reveal-item reveal-delay-3">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  m.sc. in computer engineering at
+                  <a href="https://bogazici.edu.tr" target="_blank" rel="noopener" class="inline-entity">
+                    <span class="inline-badge inline-badge--boun" aria-hidden="true">❖</span>Boğaziçi University
+                  </a>
+                </span>
+              </div>
+              <ul class="bio-sublist">
+                <li>
+                  <span class="sub-arrow" aria-hidden="true">↳</span>
+                  <span>
+                    b.sc. in electronics &amp; communication engineering from
+                    <a href="https://itu.edu.tr" target="_blank" rel="noopener" class="inline-entity">
+                      <span class="inline-badge inline-badge--itu" aria-hidden="true">🐝</span>ITU
+                    </a>
+                    <span class="muted-note">(2022 – 2026)</span>
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Bullet 2: Current Research -->
+            <li class="bio-item reveal-item reveal-delay-3">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  researching software pipelines &amp; sensor data systems at
+                  <span class="inline-entity">
+                    <span class="inline-badge inline-badge--quantum" aria-hidden="true">⚛</span>ITU Quantum Systems Lab
+                  </span>
+                </span>
+              </div>
+              <ul class="bio-sublist">
+                <li>
+                  <span class="sub-arrow" aria-hidden="true">↳</span>
+                  <span>
+                    building automated <span class="accent-oak">Python</span> ingestion pipelines, anomaly filters &amp; <span class="accent-rose">PyTorch</span> predictive models
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Bullet 3: Previous Internships & Labs -->
+            <li class="bio-item reveal-item reveal-delay-4">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  previously engineered digital hardware &amp; wireless systems at:
+                </span>
+              </div>
+              <ul class="bio-sublist">
+                <li>
+                  <span class="sub-arrow" aria-hidden="true">↳</span>
+                  <span>
+                    <span class="inline-entity">
+                      <span class="inline-badge inline-badge--tubitak" aria-hidden="true">⚡</span>TÜBİTAK BİLGEM
+                    </span>
+                    — modeled <span class="accent-sage">RISC-V</span> processor data-paths in <span class="accent-oak">Verilog / SystemVerilog</span> &amp; verified on <span class="accent-sage">FPGA</span>
+                  </span>
+                </li>
+                <li>
+                  <span class="sub-arrow" aria-hidden="true">↳</span>
+                  <span>
+                    <span class="inline-entity">
+                      <span class="inline-badge inline-badge--bountenna" aria-hidden="true">📡</span>BOUNTENNA Lab
+                    </span>
+                    — wearable antenna prototyping &amp; automated EM simulation pipelines
+                  </span>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Bullet 4: Recent Projects Link -->
+            <li class="bio-item reveal-item reveal-delay-4">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  recent builds: non-invasive <span class="accent-sage">Wi-Fi CSI + ESP32</span> diabetes biosensing, <span class="accent-oak">50K+</span> academic deep attention models &amp; <span class="accent-rose">1M+</span> stream NLP quant engines
+                  <button type="button" class="inline-tab-jump" data-tab-jump="projects">→ view polaroids</button>
+                </span>
+              </div>
+            </li>
+
+            <!-- Bullet 5: Honors, CS50 & Volunteering -->
+            <li class="bio-item reveal-item reveal-delay-5">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  alumni of
+                  <span class="inline-entity">
+                    <span class="inline-badge inline-badge--harvard" aria-hidden="true">🎓</span>Harvard Aspire Leaders
+                  </span>
+                  &amp; <span class="accent-oak">CS50x</span>; stray animal caretaker in Istanbul 🐾
+                </span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ==================================================================
+             TAB 2: PROJECTS (3D TILT & 180° FLIP POLAROID PHOTOCARDS)
+             Adapted from photocard.zip / parallax-depth-cards.zip
+             Pastel borders (#B7BFA8, #DEB892, #DFB1A5), 3D hover tilt, 180° click flip
+             ================================================================== -->
+        <section
+          id="tab-projects"
+          class="tab-panel"
+          role="tabpanel"
+          aria-label="projects"
+          hidden
+        >
+          <div class="panel-intro-bar">
+            <p class="panel-micro-note">
+              hover to tilt in 3d <span class="dot-sep">·</span> click any polaroid to flip 180° for specs
+            </p>
+          </div>
+
+          <div class="polaroid-column-grid">
+
+            <!-- POLAROID 1: Non-Invasive Diabetes Detection (Senior Thesis) -->
+            <article
+              class="photocard-wrap"
+              data-frame="sage"
+              tabindex="0"
+              role="button"
+              aria-label="Non-Invasive Diabetes Detection Polaroid — Click to flip 180 degrees"
+            >
+              <div class="photocard-tilt">
+                <div class="photocard-flipper">
+                  <!-- FRONT FACE -->
+                  <div class="photocard-face photocard-face--front">
+                    <div class="photocard-glare"></div>
+                    <div class="polaroid-photo-window">
+                      <span class="polaroid-chip">senior thesis</span>
+                      <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
+                      <div class="polaroid-bg-layer">
+                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="320" height="200" fill="#172E52" />
+                          <circle cx="160" cy="100" r="72" stroke="#43E8D8" stroke-width="1.6" stroke-dasharray="5 5" fill="none" opacity="0.5" />
+                          <circle cx="160" cy="100" r="48" stroke="#F9B4B7" stroke-width="2" fill="none" opacity="0.65" />
+                          <rect x="42" y="68" width="74" height="64" rx="8" fill="#FAF8F5" stroke="#DEB892" stroke-width="2.5" />
+                          <rect x="52" y="80" width="54" height="28" rx="4" fill="#1C355E" />
+                          <text x="79" y="98" fill="#43E8D8" font-family="monospace" font-size="10" text-anchor="middle">ESP32</text>
+                          <path d="M124,100 Q160,72 196,100 T258,100" fill="none" stroke="#43E8D8" stroke-width="3" stroke-linecap="round" />
+                          <rect x="206" y="68" width="72" height="64" rx="8" fill="#FAF8F5" stroke="#B7BFA8" stroke-width="2.5" />
+                          <circle cx="242" cy="100" r="18" fill="#FFE3E5" stroke="#F2797B" stroke-width="2" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="polaroid-caption-area">
+                      <h2 class="polaroid-card-title">CSI &amp; Battery-Free Biosensor AI</h2>
+                      <p class="polaroid-card-sub">Non-invasive breath acetone detection via ESP32 &amp; deep learning</p>
+                    </div>
+                  </div>
+
+                  <!-- BACK FACE (180° FLIP) -->
+                  <div class="photocard-face photocard-face--back">
+                    <div class="back-top-row">
+                      <span class="back-tag">hardware + ai</span>
+                      <span class="back-flip-return">↩ back</span>
+                    </div>
+                    <h3 class="back-card-heading">Non-Invasive Diabetes Detection</h3>
+                    <p class="back-card-desc">
+                      Acquired real-time breath acetone data using ESP32 microcontrollers and battery-free RFID biosensor tags; filtered high-dimensional Wi-Fi CSI streams in Python &amp; trained PyTorch models.
+                    </p>
+                    <div class="back-tech-pills">
+                      <span>Python</span>
+                      <span>PyTorch</span>
+                      <span>ESP32</span>
+                      <span>Wi-Fi CSI</span>
+                      <span>RFID</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- POLAROID 2: Deep Predictive Modeling (50K+ Academic Records) -->
+            <article
+              class="photocard-wrap"
+              data-frame="oak"
+              tabindex="0"
+              role="button"
+              aria-label="Academic Career Success Deep Predictive Modeling Polaroid — Click to flip 180 degrees"
+            >
+              <div class="photocard-tilt">
+                <div class="photocard-flipper">
+                  <!-- FRONT FACE -->
+                  <div class="photocard-face photocard-face--front">
+                    <div class="photocard-glare"></div>
+                    <div class="polaroid-photo-window">
+                      <span class="polaroid-chip">50k+ records</span>
+                      <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
+                      <div class="polaroid-bg-layer">
+                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="320" height="200" fill="#1C355E" />
+                          <g stroke="#DEB892" stroke-width="1.8" opacity="0.65">
+                            <line x1="74" y1="62" x2="156" y2="50" />
+                            <line x1="74" y1="62" x2="148" y2="116" />
+                            <line x1="156" y1="50" x2="244" y2="76" />
+                            <line x1="148" y1="116" x2="244" y2="76" />
+                            <line x1="148" y1="116" x2="228" y2="148" />
+                            <line x1="88" y1="142" x2="148" y2="116" />
+                          </g>
+                          <circle cx="74" cy="62" r="14" fill="#FFE3E5" stroke="#F2797B" stroke-width="2.5" />
+                          <circle cx="156" cy="50" r="17" fill="#43E8D8" stroke="#FAF8F5" stroke-width="2.5" />
+                          <circle cx="148" cy="116" r="21" fill="#FAF8F5" stroke="#DEB892" stroke-width="3" />
+                          <circle cx="244" cy="76" r="16" fill="#F9B4B7" stroke="#FAF8F5" stroke-width="2.5" />
+                          <circle cx="228" cy="148" r="13" fill="#B7BFA8" stroke="#FAF8F5" stroke-width="2" />
+                          <circle cx="88" cy="142" r="12" fill="#DEB892" stroke="#FAF8F5" stroke-width="2" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="polaroid-caption-area">
+                      <h2 class="polaroid-card-title">Cls-Fellow &amp; Reg-Fellow Attention</h2>
+                      <p class="polaroid-card-sub">Self-attention predictive modeling on 50K+ academic career graphs</p>
+                    </div>
+                  </div>
+
+                  <!-- BACK FACE (180° FLIP) -->
+                  <div class="photocard-face photocard-face--back">
+                    <div class="back-top-row">
+                      <span class="back-tag">deep learning</span>
+                      <span class="back-flip-return">↩ back</span>
+                    </div>
+                    <h3 class="back-card-heading">Academic Career Determinants</h3>
+                    <p class="back-card-desc">
+                      Engineered modular Python ETL and evaluation pipelines across 50,000+ structured records, validating self-attention architectures (Cls-Fellow &amp; Reg-Fellow) for quantitative forecasting.
+                    </p>
+                    <div class="back-tech-pills">
+                      <span>Python</span>
+                      <span>PyTorch</span>
+                      <span>Scikit-learn</span>
+                      <span>Pandas</span>
+                      <span>Self-Attention</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- POLAROID 3: Crypto Sentiment & Trading Strategy Modeling (1M+ Streams) -->
+            <article
+              class="photocard-wrap"
+              data-frame="rose"
+              tabindex="0"
+              role="button"
+              aria-label="Crypto Sentiment and Quantitative Strategy Polaroid — Click to flip 180 degrees"
+            >
+              <div class="photocard-tilt">
+                <div class="photocard-flipper">
+                  <!-- FRONT FACE -->
+                  <div class="photocard-face photocard-face--front">
+                    <div class="photocard-glare"></div>
+                    <div class="polaroid-photo-window">
+                      <span class="polaroid-chip">1m+ streams</span>
+                      <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
+                      <div class="polaroid-bg-layer">
+                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="320" height="200" fill="#193158" />
+                          <rect x="38" y="34" width="244" height="132" rx="10" fill="#FAF8F5" stroke="#DFB1A5" stroke-width="2.5" />
+                          <line x1="54" y1="72" x2="264" y2="72" stroke="#E5DEC9" stroke-width="1" />
+                          <line x1="54" y1="104" x2="264" y2="104" stroke="#E5DEC9" stroke-width="1" />
+                          <line x1="54" y1="136" x2="264" y2="136" stroke="#E5DEC9" stroke-width="1" />
+                          <rect x="72" y="94" width="11" height="32" rx="2" fill="#38B899" />
+                          <rect x="108" y="76" width="11" height="38" rx="2" fill="#38B899" />
+                          <rect x="144" y="88" width="11" height="28" rx="2" fill="#F2797B" />
+                          <rect x="180" y="64" width="11" height="42" rx="2" fill="#38B899" />
+                          <rect x="216" y="52" width="11" height="40" rx="2" fill="#38B899" />
+                          <path d="M62,128 C98,108 132,82 168,92 C204,102 230,58 258,52" fill="none" stroke="#1C355E" stroke-width="2.8" stroke-linecap="round" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="polaroid-caption-area">
+                      <h2 class="polaroid-card-title">NLP Sentiment &amp; Quant Backtester</h2>
+                      <p class="polaroid-card-sub">1M+ social streams fused with historical market time-series</p>
+                    </div>
+                  </div>
+
+                  <!-- BACK FACE (180° FLIP) -->
+                  <div class="photocard-face photocard-face--back">
+                    <div class="back-top-row">
+                      <span class="back-tag">nlp + time-series</span>
+                      <span class="back-flip-return">↩ back</span>
+                    </div>
+                    <h3 class="back-card-heading">Crypto Sentiment Strategy</h3>
+                    <p class="back-card-desc">
+                      Built an automated NLP text extraction pipeline in Python across 1M+ social streams and integrated sentiment polarity indices with MATLAB &amp; Python rule-based trading strategies.
+                    </p>
+                    <div class="back-tech-pills">
+                      <span>Python</span>
+                      <span>MATLAB</span>
+                      <span>NLP</span>
+                      <span>Time-Series</span>
+                      <span>ETL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- POLAROID 4: RISC-V Processor & FPGA Synthesis -->
+            <article
+              class="photocard-wrap"
+              data-frame="oak"
+              tabindex="0"
+              role="button"
+              aria-label="RISC-V Processor RTL and FPGA Synthesis Polaroid — Click to flip 180 degrees"
+            >
+              <div class="photocard-tilt">
+                <div class="photocard-flipper">
+                  <!-- FRONT FACE -->
+                  <div class="photocard-face photocard-face--front">
+                    <div class="photocard-glare"></div>
+                    <div class="polaroid-photo-window">
+                      <span class="polaroid-chip">digital design</span>
+                      <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
+                      <div class="polaroid-bg-layer">
+                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="320" height="200" fill="#1A325A" />
+                          <rect x="52" y="36" width="216" height="128" rx="10" fill="#2A473E" stroke="#B7BFA8" stroke-width="3" />
+                          <rect x="112" y="58" width="96" height="84" rx="8" fill="#FAF8F5" stroke="#DEB892" stroke-width="2.5" />
+                          <text x="160" y="98" fill="#1C355E" font-family="monospace" font-weight="bold" font-size="14" text-anchor="middle">RISC-V</text>
+                          <text x="160" y="116" fill="#725344" font-family="monospace" font-size="9" text-anchor="middle">RTL · FPGA</text>
+                          <g stroke="#DEB892" stroke-width="2" stroke-linecap="round">
+                            <line x1="74" y1="74" x2="112" y2="74" />
+                            <line x1="74" y1="100" x2="112" y2="100" />
+                            <line x1="74" y1="126" x2="112" y2="126" />
+                            <line x1="208" y1="74" x2="246" y2="74" />
+                            <line x1="208" y1="100" x2="246" y2="100" />
+                            <line x1="208" y1="126" x2="246" y2="126" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="polaroid-caption-area">
+                      <h2 class="polaroid-card-title">RISC-V Core &amp; FPGA Verification</h2>
+                      <p class="polaroid-card-sub">RTL synthesis, timing analysis &amp; board verification at TÜBİTAK</p>
+                    </div>
+                  </div>
+
+                  <!-- BACK FACE (180° FLIP) -->
+                  <div class="photocard-face photocard-face--back">
+                    <div class="back-top-row">
+                      <span class="back-tag">semiconductor</span>
+                      <span class="back-flip-return">↩ back</span>
+                    </div>
+                    <h3 class="back-card-heading">RISC-V Datapath &amp; Control</h3>
+                    <p class="back-card-desc">
+                      Modeled core processor data-path and control units in Verilog &amp; SystemVerilog, analyzing timing closure and verifying hardware logic modules on physical FPGA boards.
+                    </p>
+                    <div class="back-tech-pills">
+                      <span>Verilog</span>
+                      <span>SystemVerilog</span>
+                      <span>RISC-V</span>
+                      <span>FPGA</span>
+                      <span>Git</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ==================================================================
+             TAB 3: PLAYGROUND (INTERACTIVE COZY AMBIANCE & TECHNICAL TOOLKIT)
+             ================================================================== -->
+        <section
+          id="tab-playground"
+          class="tab-panel"
+          role="tabpanel"
+          aria-label="playground"
+          hidden
+        >
+          <p class="panel-micro-note">
+            tactile cozy switches &amp; engineering toolkit
+          </p>
+
+          <!-- Interactive Micro-Controls Strip -->
+          <div class="playground-controls-box">
+            <div class="playground-row">
+              <span class="playground-label">🎐 wind chime (fūrin)</span>
+              <div class="playground-actions">
+                <button type="button" class="micro-action-btn" id="pg-ring-chime">ring chime</button>
+                <button type="button" class="micro-action-btn" id="pg-breeze-gust">sakura gust 🌸</button>
+              </div>
+            </div>
+
+            <div class="playground-row">
+              <span class="playground-label">👓 lil’ burak companion</span>
+              <div class="playground-actions">
+                <button type="button" class="micro-action-btn" id="pg-toggle-lilme">peek / hide</button>
+                <button type="button" class="micro-action-btn" id="pg-dizzy-lilme">spin glasses 🌀</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Minimalist Technical Stack Breakdown -->
+          <ul class="minimal-bio-list compact-stack-list">
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span><strong>languages &amp; hdl:</strong> <span class="accent-oak">Python</span>, <span class="accent-oak">C++</span>, C, SQL, Bash, MATLAB, <span class="accent-sage">Verilog</span>, <span class="accent-sage">SystemVerilog</span></span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span><strong>ai &amp; data systems:</strong> <span class="accent-rose">PyTorch</span>, Scikit-learn, TensorFlow, Pandas, NumPy, SciPy, Automated ETL</span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span><strong>hardware &amp; devops:</strong> <span class="accent-sage">RISC-V</span>, RTL Synthesis, FPGA, ESP32, Linux/Unix, Docker, Git</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ==================================================================
+             TAB 4: CONTACT (MINIMALIST DIRECT CHANNELS & ONE-CLICK COPY)
+             ================================================================== -->
+        <section
+          id="tab-contact"
+          class="tab-panel"
+          role="tabpanel"
+          aria-label="contact"
+          hidden
+        >
+          <p class="panel-micro-note">
+            always happy to chat about software pipelines, silicon or lo-fi playlists
+          </p>
+
+          <ul class="minimal-bio-list">
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  email —
+                  <a href="mailto:brkmentesoglu@gmail.com" class="accent-link">brkmentesoglu@gmail.com</a>
+                  <button type="button" id="copy-email-btn" class="inline-tab-jump" title="Copy email address">copy</button>
+                </span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  github —
+                  <a href="https://github.com/burakmentesoglu" target="_blank" rel="noopener" class="accent-link">github.com/burakmentesoglu</a>
+                </span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  linkedin —
+                  <a href="https://www.linkedin.com/in/burak-mentesoglu" target="_blank" rel="noopener" class="accent-link">linkedin.com/in/burak-mentesoglu</a>
+                </span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  curriculum vitae —
+                  <a href="./BurakMentesogluResume_ANALOG_DEVICES_SOFTWERE_DEV_INTERN.pdf" target="_blank" rel="noopener" class="accent-link">BurakMentesoglu_CV.pdf ↗</a>
+                </span>
+              </div>
+            </li>
+            <li class="bio-item">
+              <div class="bio-line">
+                <span class="bullet-dot">•</span>
+                <span>
+                  location — <span class="muted-note">Istanbul, Turkey</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- ====================================================================
+           PERSISTENT COLUMN FOOTER:
+           Side-by-Side Minimal Social Links + Steaming Hot Drink Cup (#4)
+           ==================================================================== -->
+      <footer class="column-footer reveal-item reveal-delay-5">
+        <div class="footer-links-row">
+          <a href="mailto:brkmentesoglu@gmail.com" class="minimal-social-link">email</a>
+          <span class="footer-sep" aria-hidden="true">/</span>
+          <a href="https://github.com/burakmentesoglu" target="_blank" rel="noopener" class="minimal-social-link">github</a>
+          <span class="footer-sep" aria-hidden="true">/</span>
+          <a href="https://www.linkedin.com/in/burak-mentesoglu" target="_blank" rel="noopener" class="minimal-social-link">linkedin</a>
+          <span class="footer-sep" aria-hidden="true">/</span>
+          <a href="./BurakMentesogluResume_ANALOG_DEVICES_SOFTWERE_DEV_INTERN.pdf" target="_blank" rel="noopener" class="minimal-social-link">cv</a>
+        </div>
+
+        <!-- KEY FEATURE 4: STEAMING HOT DRINK RIGHT BESIDE FOOTER LINKS / SIGNATURE -->
+        <div
+          id="steaming-tea-widget"
+          class="steaming-cup-inline"
+          role="button"
+          tabindex="0"
+          aria-label="Steaming cup of warm matcha tea — Click for a warm sip"
+          title="Freshly brewed warm tea (click for a sip)"
+        >
+          <svg class="inline-cup-svg" viewBox="0 0 68 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Continuous Rising Thin Steam Wisps -->
+            <path class="steam-wisp steam-wisp--1" d="M24,22 C21,15 28,10 24,3" />
+            <path class="steam-wisp steam-wisp--2" d="M33,20 C36,12 29,7 33,1" />
+            <path class="steam-wisp steam-wisp--3" d="M42,22 C39,15 45,10 41,3" />
+            <!-- Warm Oak Wooden Coaster -->
+            <ellipse cx="33" cy="54" rx="22" ry="4.5" fill="#DEB892" stroke="#725344" stroke-width="1.4" />
+            <!-- Mug Handle -->
+            <path d="M48,31 C56,31 56,45 47,45" stroke="#FAF8F5" stroke-width="3.5" stroke-linecap="round" />
+            <!-- Ceramic Mug Body -->
+            <path d="M17,26 L49,26 L46,47 C45,52 40,54 33,54 C26,54 21,52 20,47 Z" fill="#FAF8F5" stroke="#9E7662" stroke-width="1.6" />
+            <!-- Pastel Sage Band -->
+            <path d="M19,41 L47,41 L46,47 C45,52 40,54 33,54 C26,54 21,52 20,47 Z" fill="#B7BFA8" opacity="0.85" />
+            <!-- Warm Tea / Coffee Rim -->
+            <ellipse cx="33" cy="26" rx="16" ry="4" fill="#E8DFD1" stroke="#9E7662" stroke-width="1.4" />
+            <ellipse cx="33" cy="26.5" rx="13.5" ry="2.6" fill="#88A47C" />
+          </svg>
+          <span id="tea-sip-label" class="cup-micro-status">68°C</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ========================================================================
+       7. "LIL ME" CHARACTER (ADAPTED FROM LIL ME.ZIP)
+       Male character with Black Hair & Clear-Framed (Transparent) Glasses!
+       Peeks up from the bottom edge when switching tabs or scrolling.
+       ======================================================================== -->
+  <aside id="lil-me-companion" class="lil-me-dock" aria-label="Interactive Lil Burak Companion">
+    <div class="lil-me-bubble" id="lil-me-speech">
+      <span id="lil-me-text">hi! click any tab or polaroid to explore ✨</span>
+    </div>
+
+    <div
+      id="lil-me-trigger"
+      class="lil-me-avatar-btn"
+      role="button"
+      tabindex="0"
+      aria-label="Lil Burak character — move cursor to track eyes or click to wave"
+      title="Move cursor to see eye tracking, or click me!"
+    >
+      <svg id="lil-me-svg" viewBox="0 10 211.73 180" stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <clipPath id="background-clip">
+            <path d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-8.82-80.28-33.59-86.29C136.84-6.57 114.13-5.82 88-2.82S34.73 11.45 16.71 48.24C-1.5 66.64-4.88 125.2 39 153.73z" fill="none" />
+          </clipPath>
+
+          <!-- Male Black Hair Gradient -->
+          <linearGradient id="male-black-hair-grad" x1="104" y1="120" x2="104" y2="30" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#12151E" />
+            <stop offset="0.55" stop-color="#1B202C" />
+            <stop offset="1" stop-color="#2B3346" />
+          </linearGradient>
+
+          <!-- Clear-Framed Transparent Glasses Glint -->
+          <linearGradient id="clear-lens-glint" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32" />
+            <stop offset="50%" stop-color="#E6F4FF" stop-opacity="0.08" />
+            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.22" />
+          </linearGradient>
+        </defs>
+
+        <!-- Cozy Pastel Sage & Oak Blob Backdrop -->
+        <path
+          class="bg"
+          d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z"
+          fill="#B7BFA8"
+          stroke="#FAF8F5"
+          stroke-width="2.5"
+        />
+
+        <g clip-path="url(#background-clip)">
+          <g class="me" opacity="0">
+            <g class="body">
+              <path class="shadow" d="M126,56 C133,66 135,88 134,114 L125,152 L84,152 L75,114 C74,88 76,66 83,56 Z" opacity="0.08" />
+
+              <!-- Short Tapered Male Black Back-Hair -->
+              <path
+                class="hair-back hair"
+                d="M69,88 C66,68 74,44 104.8,41 C135.5,44 143.5,68 140.5,88 C139,95 137,101 135,104 L74,104 C72,101 70,95 69,88 Z"
+                fill="url(#male-black-hair-grad)"
+              />
+
+              <!-- Neck & Male Sweater Collar -->
+              <path class="neck" d="M114.26 143.16v-14a9.22 9.22 0 10-18.43 0v14c-15.27 2.84-26.74 15.08-26.74 27.33H141c0-12.24-11.5-24.49-26.74-27.33z" fill="#EDE3D1" />
+              <polygon points="95.8,139 105,151 89,154" fill="#FAF8F5" stroke="#B5AA9A" stroke-width="0.8" />
+              <polygon points="114.2,139 105,151 121,154" fill="#FAF8F5" stroke="#B5AA9A" stroke-width="0.8" />
+              <path class="top" d="M105.61 150c-26 0-36 12-38 33h76c-2-21-12-33-38-33z" fill="#2A446B" />
+              <path class="shoulder" d="M95.82 142.87c-18 1.84-31.37 19.5-31.37 40h31.37z" fill="#1C355E" />
+              <path class="shoulder" d="M114.23 142.67c17.76 1.85 31 19.6 31 40.2h-31z" fill="#1C355E" />
+            </g>
+
+            <path class="shadow" d="M95.82 122.36h18.41v14.31s-10.5 5.54-18.41 0z" fill="#DFC2AE" />
+
+            <!-- Head -->
+            <g class="head">
+              <g class="ear-left ear">
+                <path d="M63.52 105.14A8.21 8.21 0 0072 113.2a8.36 8.36 0 008.51-8.1A8.21 8.21 0 0072 97a8.36 8.36 0 00-8.48 8.14z" fill="#EDE3D1" />
+                <path d="M68.54 104.48a17 17 0 014.14.41c1.07.31 1.94 1 3 1.31a.39.39 0 00.43-.57c-1.15-2.38-5.49-1.86-7.58-1.67a.26.26 0 000 .52z" fill="#B5AA9A" />
+              </g>
+              <g class="ear-right ear">
+                <path d="M144.37 105.24a8.2 8.2 0 01-8.37 8.06 8.35 8.35 0 01-8.51-8.1 8.21 8.21 0 018.42-8.06 8.35 8.35 0 018.46 8.1z" fill="#EDE3D1" />
+                <path d="M139.6 104c-2.1-.19-6.43-.72-7.59 1.67a.39.39 0 00.44.57c1.07-.26 1.92-1 3-1.31a17.51 17.51 0 014.15-.41.26.26 0 000-.52z" fill="#B5AA9A" />
+              </g>
+
+              <g class="face">
+                <rect x="73.99" y="48.26" width="61.54" height="80.49" rx="24.5" transform="rotate(180 104.76 88.5)" fill="#EDE3D1" />
+
+                <g class="inner-face">
+                  <!-- Male Black Eyebrows -->
+                  <path class="eyebrow-right" d="M122.2 78.2a10 10 0 00-4.6-1.35 10.5 10.5 0 00-4.8.9" fill="none" stroke="#181C24" stroke-width="2.3" stroke-linecap="round" />
+                  <path class="eyebrow-left" d="M96.8 78.2a10 10 0 00-4.6-1.25 10.5 10.5 0 00-4.8.8" fill="none" stroke="#181C24" stroke-width="2.3" stroke-linecap="round" />
+
+                  <!-- Smile & Oh Mouth -->
+                  <path class="mouth" d="M97.5 108s6.8 4.2 13.8 1.2" fill="none" stroke="#9C8474" stroke-width="1.5" />
+                  <path class="oh" opacity="0" d="M105.56,117.06c4-.14,5-2.89,4.7-5.64s-1.88-6.7-4.84-6.62-4.73,4.36-4.9,6.72S101.57,117.19,105.56,117.06Z" fill="#262528" />
+
+                  <!-- Eyes -->
+                  <g class="eyes">
+                    <path class="eye-left eye" d="M89.48 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#181C24" />
+                    <path class="eye-right eye" d="M113.67 87.37c-.07 2.08 1.25 3.8 2.94 3.85s3.1-1.59 3.16-3.67-1.25-3.8-2.94-3.85-3.1 1.59-3.16 3.67z" fill="#181C24" />
+                    <circle class="eye" cx="93.5" cy="85.8" r="1.1" fill="#FFFFFF" />
+                    <circle class="eye" cx="117.7" cy="85.8" r="1.1" fill="#FFFFFF" />
+                    <path class="eye-right-2 eye" d="M114.11 88a5.72 5.72 0 002.48.72 6.46 6.46 0 002.59-.45" opacity="0" fill="none" stroke="#181C24" stroke-width="1.4" />
+                    <path class="eye-left-2 eye" d="M89.85 88a5.77 5.77 0 002.56.3 6.48 6.48 0 002.49-.87" fill="none" opacity="0" stroke="#181C24" stroke-width="1.4" />
+                  </g>
+
+                  <!-- Dizzy Swirls -->
+                  <path class="dizzy dizzy-1" opacity="0" d="M113.61,87.6c.54-2.66,2.66-3.84,4.63-3.37A3.3,3.3,0,0,1,117,90.71a2.53,2.53,0,0,1-2-3,2.48,2.48,0,0,1,2.73-1.92A1.71,1.71,0,0,1,119.32,88a1.59,1.59,0,0,1-1.75,1.34c-.79-.1-1.41-.59-1-1.42s1-.72,1.22-.24" fill="none" stroke="#181C24" stroke-width="0.85" />
+                  <path class="dizzy dizzy-2" opacity="0" d="M96.15,87.27c-.54-2.66-2.66-3.84-4.63-3.37s-2.89,1.9-2.46,4a3.11,3.11,0,0,0,3.68,2.45,2.53,2.53,0,0,0,2-3A2.49,2.49,0,0,0,92,85.49a1.71,1.71,0,0,0-1.57,2.13A1.57,1.57,0,0,0,92.19,89c.79-.11,1.41-.6,1-1.43s-1-.72-1.22-.23" fill="none" stroke="#181C24" stroke-width="0.85" />
+
+                  <path class="nose" d="M102.39 98.13s3.09 1.55 5.78 0" fill="none" stroke="#CBBBA4" stroke-width="1.3" />
+
+                  <!-- CLEAR-FRAMED TRANSPARENT GLASSES -->
+                  <g class="glasses">
+                    <rect x="77.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="url(#clear-lens-glint)" />
+                    <rect x="108.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="url(#clear-lens-glint)" />
+                    <rect x="77.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="none" stroke="rgba(255, 255, 255, 0.88)" stroke-width="2.4" />
+                    <rect x="77.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="none" stroke="rgba(180, 200, 220, 0.55)" stroke-width="0.9" />
+                    <rect x="108.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="none" stroke="rgba(255, 255, 255, 0.88)" stroke-width="2.4" />
+                    <rect x="108.5" y="80.5" width="23.5" height="17.5" rx="6.5" fill="none" stroke="rgba(180, 200, 220, 0.55)" stroke-width="0.9" />
+                    <path d="M101,86.5 Q104.75,84.5 108.5,86.5" fill="none" stroke="rgba(255, 255, 255, 0.9)" stroke-width="2.2" />
+                    <line x1="73.5" y1="86" x2="77.5" y2="86" stroke="rgba(255, 255, 255, 0.82)" stroke-width="2" />
+                    <line x1="132" y1="86" x2="136" y2="86" stroke="rgba(255, 255, 255, 0.82)" stroke-width="2" />
+                    <line x1="82" y1="84" x2="86" y2="93" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.4" stroke-linecap="round" />
+                    <line x1="113" y1="84" x2="117" y2="93" stroke="rgba(255, 255, 255, 0.65)" stroke-width="1.4" stroke-linecap="round" />
+                  </g>
+                </g>
+
+                <!-- Male Styled Black Front Hair -->
+                <path
+                  class="hair-front"
+                  d="M135.5,60 C131,48 119,42 105,41.5 C90,41.5 78.5,48 73.5,60 C70.5,67 71,78 72.5,87 L76,87 C76.5,77 78,69 83,65 C87,69 93,71 99,69 C97,66 96.5,63 97,60 C102,65 110,67 117,65 C116,62 115.5,60 115,58 C120,62 126,65 131,66 C133,71 133.5,79 134,87 L137.2,87 C138.5,77 138.8,67 135.5,60 Z"
+                  fill="#161A24"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </aside>
+
+  <!-- GSAP Core for Lil Me elastic entrance, eye tracking & blink timelines -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

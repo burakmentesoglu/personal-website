@@ -1,0 +1,8 @@
+# Reference assets, templates & local source files
+*.zip
+*.png
+*.tex
+lil-me/
+parallax-depth-cards/
+.DS_Store
+Thumbs.db
