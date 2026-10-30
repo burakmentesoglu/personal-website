@@ -1155,10 +1155,14 @@ a.inline-entity:hover {
 /* ==========================================================================
    12. RESPONSIVE BREAKPOINTS
    ========================================================================== */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .viewport-stage {
-    padding: 96px 18px 96px;
+    padding: 88px 18px 96px;
     align-items: flex-start;
+  }
+
+  .column-header {
+    padding-right: 68px;
   }
 
   .polaroid-column-grid {
@@ -1176,13 +1180,14 @@ a.inline-entity:hover {
   }
 
   .furin-corner-dock {
-    top: 12px;
-    left: 12px;
+    top: 10px;
+    left: auto;
+    right: 14px;
   }
 
   .furin-widget {
-    width: 44px;
-    height: 108px;
+    width: 42px;
+    height: 102px;
   }
 
   .lil-me-bubble {
