@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BURAK MENTEŞOĞLU — ULTRA-MINIMALIST CENTRAL COLUMN & BLUE HOUR SAKURA
+   BURAK MENTESOGLU — ULTRA-MINIMALIST CENTRAL COLUMN & BLUE HOUR SAKURA
    Interactive Engine (script.js):
    1. Smooth Top-to-Bottom Page Reveal
    2. SPA Tab Switcher (about, projects, art, playground, contact) with Fade
@@ -167,12 +167,12 @@
 
   /* ------------------------------------------------------------------------
      4. KYLIE-STYLE TYPEWRITER & DOCUMENT BACKSPACE HEADER EFFECT
-     "Hello, I'm Burak Menteşoğlu" -> deletes -> "an engineer and scientist" -> deletes -> "a cat lover"
+     "Hello, I'm Burak Mentesoglu" -> deletes -> "an engineer and scientist" -> deletes -> "a cat lover"
      ------------------------------------------------------------------------ */
   const typedTextEl = document.getElementById('typed-text');
   const typedCursorEl = document.querySelector('.typed-cursor');
   const typedPhrases = [
-    'Burak Menteşoğlu',
+    'Burak Mentesoglu',
     'an engineer and scientist',
     'a cat lover'
   ];
@@ -216,7 +216,7 @@
       }
     }
 
-    // Start backspacing "Burak Menteşoğlu" after initial page reveal
+    // Start backspacing "Burak Mentesoglu" after initial page reveal
     setTimeout(stepTypewriter, 2200);
   }
 
