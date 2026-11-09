@@ -2,6 +2,7 @@
 *.zip
 *.png
 !assets/*.png
+!assets/*.jpg
 !assets/*.svg
 *.tex
 lil-me/

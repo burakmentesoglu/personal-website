@@ -46,114 +46,411 @@
        Placed at the exact corner positions of the reference layout, never blocking central text.
        Branches: #725344, #9E7662 | Blossoms: #FFE3E5, #F9B4B7, #F2797B
        ======================================================================== -->
-  <!-- TOP-LEFT SAKURA BOUGH -->
+  <!-- TOP-LEFT LUSH REALISTIC SAKURA CANOPY -->
   <div class="sakura-corner sakura-corner--top-left" aria-hidden="true">
-    <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <filter id="petal-glow-tl" x="-25%" y="-25%" width="150%" height="150%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
+        <filter id="petal-glow-tl" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3.2" result="blur" />
           <feComposite in="SourceGraphic" in2="blur" operator="over" />
         </filter>
-      </defs>
-      <!-- Main Top-Left Woody Boughs -->
-      <path d="M-18,16 C85,32 175,64 275,112 C335,140 385,158 430,172" stroke="#725344" stroke-width="11" stroke-linecap="round" />
-      <path d="M-12,12 C88,28 178,60 278,108 C332,134 380,152 422,166" stroke="#9E7662" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
-      <path d="M-14,88 C64,104 132,132 198,176 C244,206 282,238 318,266" stroke="#725344" stroke-width="8" stroke-linecap="round" />
-      <!-- Secondary Twigs -->
-      <path d="M135,52 C168,96 202,132 248,162" stroke="#9E7662" stroke-width="5" stroke-linecap="round" />
-      <path d="M225,90 C272,68 320,56 374,62" stroke="#725344" stroke-width="5" stroke-linecap="round" />
-      <path d="M96,116 C86,164 76,208 58,248" stroke="#725344" stroke-width="5" stroke-linecap="round" />
-      <path d="M178,162 C166,208 154,246 132,282" stroke="#9E7662" stroke-width="4" stroke-linecap="round" />
-      <path d="M275,112 C288,158 302,198 322,232" stroke="#725344" stroke-width="4.5" stroke-linecap="round" />
+        <radialGradient id="petal-grad-light" cx="50%" cy="65%" r="65%">
+          <stop offset="0%" stop-color="#F2797B" />
+          <stop offset="38%" stop-color="#F9B4B7" />
+          <stop offset="100%" stop-color="#FFE3E5" />
+        </radialGradient>
+        <radialGradient id="petal-grad-deep" cx="50%" cy="65%" r="65%">
+          <stop offset="0%" stop-color="#D95B66" />
+          <stop offset="45%" stop-color="#F2797B" />
+          <stop offset="100%" stop-color="#F9B4B7" />
+        </radialGradient>
 
-      <!-- Glowing Pastel Sakura Clusters -->
+        <!-- Realistic 5-Petal Notched Sakura Blossom (Light Blush) -->
+        <g id="sakura-blossom">
+          <g fill="url(#petal-grad-light)" stroke="#F9B4B7" stroke-width="0.45">
+            <path d="M0,0 C-5.5,-6 -9.5,-15 -4.2,-20.5 C-2.2,-22.2 -0.8,-20.2 0,-18 C0.8,-20.2 2.2,-22.2 4.2,-20.5 C9.5,-15 5.5,-6 0,0 Z" />
+            <path d="M0,0 C-5.5,-6 -9.5,-15 -4.2,-20.5 C-2.2,-22.2 -0.8,-20.2 0,-18 C0.8,-20.2 2.2,-22.2 4.2,-20.5 C9.5,-15 5.5,-6 0,0 Z" transform="rotate(72)" />
+            <path d="M0,0 C-5.5,-6 -9.5,-15 -4.2,-20.5 C-2.2,-22.2 -0.8,-20.2 0,-18 C0.8,-20.2 2.2,-22.2 4.2,-20.5 C9.5,-15 5.5,-6 0,0 Z" transform="rotate(144)" />
+            <path d="M0,0 C-5.5,-6 -9.5,-15 -4.2,-20.5 C-2.2,-22.2 -0.8,-20.2 0,-18 C0.8,-20.2 2.2,-22.2 4.2,-20.5 C9.5,-15 5.5,-6 0,0 Z" transform="rotate(216)" />
+            <path d="M0,0 C-5.5,-6 -9.5,-15 -4.2,-20.5 C-2.2,-22.2 -0.8,-20.2 0,-18 C0.8,-20.2 2.2,-22.2 4.2,-20.5 C9.5,-15 5.5,-6 0,0 Z" transform="rotate(288)" />
+          </g>
+          <circle cx="0" cy="0" r="3.4" fill="#E05A68" />
+          <g stroke="#F2797B" stroke-width="0.65" stroke-linecap="round">
+            <line x1="0" y1="0" x2="0" y2="-7.5" /><line x1="0" y1="0" x2="5.2" y2="-5.2" />
+            <line x1="0" y1="0" x2="7.2" y2="1.8" /><line x1="0" y1="0" x2="3.2" y2="6.8" />
+            <line x1="0" y1="0" x2="-3.5" y2="6.6" /><line x1="0" y1="0" x2="-7.2" y2="1.5" />
+            <line x1="0" y1="0" x2="-5" y2="-5.4" />
+          </g>
+          <g fill="#FAF8F5">
+            <circle cx="0" cy="-7.8" r="1.05" /><circle cx="5.4" cy="-5.4" r="1.05" />
+            <circle cx="7.5" cy="1.9" r="1.05" /><circle cx="3.3" cy="7.1" r="1.05" />
+            <circle cx="-3.6" cy="6.9" r="1.05" /><circle cx="-7.5" cy="1.6" r="1.05" />
+            <circle cx="-5.2" cy="-5.6" r="1.05" /><circle cx="0" cy="0" r="1.3" fill="#DEB892" />
+          </g>
+        </g>
+
+        <!-- Realistic 5-Petal Notched Sakura Blossom (Deep Rose Accent) -->
+        <g id="sakura-blossom-deep">
+          <g fill="url(#petal-grad-deep)" stroke="#FFE3E5" stroke-width="0.45">
+            <path d="M0,0 C-5,-5.5 -8.5,-13.5 -3.8,-18.5 C-2,-20 -0.7,-18.2 0,-16.2 C0.7,-18.2 2,-20 3.8,-18.5 C8.5,-13.5 5,-5.5 0,0 Z" />
+            <path d="M0,0 C-5,-5.5 -8.5,-13.5 -3.8,-18.5 C-2,-20 -0.7,-18.2 0,-16.2 C0.7,-18.2 2,-20 3.8,-18.5 C8.5,-13.5 5,-5.5 0,0 Z" transform="rotate(72)" />
+            <path d="M0,0 C-5,-5.5 -8.5,-13.5 -3.8,-18.5 C-2,-20 -0.7,-18.2 0,-16.2 C0.7,-18.2 2,-20 3.8,-18.5 C8.5,-13.5 5,-5.5 0,0 Z" transform="rotate(144)" />
+            <path d="M0,0 C-5,-5.5 -8.5,-13.5 -3.8,-18.5 C-2,-20 -0.7,-18.2 0,-16.2 C0.7,-18.2 2,-20 3.8,-18.5 C8.5,-13.5 5,-5.5 0,0 Z" transform="rotate(216)" />
+            <path d="M0,0 C-5,-5.5 -8.5,-13.5 -3.8,-18.5 C-2,-20 -0.7,-18.2 0,-16.2 C0.7,-18.2 2,-20 3.8,-18.5 C8.5,-13.5 5,-5.5 0,0 Z" transform="rotate(288)" />
+          </g>
+          <circle cx="0" cy="0" r="3" fill="#B93B48" />
+          <g fill="#FAF8F5">
+            <circle cx="0" cy="-6.2" r="1" /><circle cx="5.8" cy="-2" r="1" />
+            <circle cx="3.6" cy="5" r="1" /><circle cx="-3.6" cy="5" r="1" />
+            <circle cx="-5.8" cy="-2" r="1" />
+          </g>
+        </g>
+
+        <!-- Unopened Pink Sakura Bud with Calyx -->
+        <g id="sakura-bud">
+          <path d="M0,4 C-4.2,0 -4.8,-7.5 0,-12.5 C4.8,-7.5 4.2,0 0,4 Z" fill="#F2797B" />
+          <path d="M0,2.5 C-2.8,-0.5 -3,-6.5 0,-11 C2,-6.5 1.8,-0.5 0,2.5 Z" fill="#FFE3E5" opacity="0.78" />
+          <path d="M-3.2,2.5 L0,5.5 L3.2,2.5 L1.6,0.5 L0,2.5 L-1.6,0.5 Z" fill="#6E4E3E" />
+          <line x1="0" y1="5" x2="0" y2="10.5" stroke="#725344" stroke-width="1.4" stroke-linecap="round" />
+        </g>
+
+        <!-- Serrated Young Sakura Leaf (Twilight Sage Green) -->
+        <g id="sakura-leaf-g">
+          <path d="M0,0 C-6.5,-6 -8.5,-16 0,-25 C8.5,-16 6.5,-6 0,0 Z" fill="#8EA885" opacity="0.88" />
+          <path d="M0,0 C-3.2,-6 -4.5,-16 0,-25 C4.5,-16 3.2,-6 0,0 Z" fill="#B7BFA8" opacity="0.65" />
+          <path d="M0,-1 L0,-22 M0,-6 L-3.5,-9.5 M0,-10 L3.8,-13.5 M0,-14 L-3.2,-17.2 M0,-17 L2.8,-19.8" stroke="#FAF8F5" stroke-width="0.65" stroke-linecap="round" opacity="0.65" />
+        </g>
+
+        <!-- Serrated Young Sakura Leaf (Warm Bronze-Russet) -->
+        <g id="sakura-leaf-b">
+          <path d="M0,0 C-5.8,-5.5 -7.5,-14.5 0,-22.5 C7.5,-14.5 5.8,-5.5 0,0 Z" fill="#B57C68" opacity="0.86" />
+          <path d="M0,-1 L0,-19.5 M0,-6 L-3,-9 M0,-10 L3.2,-13 M0,-14 L-2.6,-16.5" stroke="#DEB892" stroke-width="0.65" stroke-linecap="round" opacity="0.7" />
+        </g>
+      </defs>
+
+      <!-- ==============================================================
+           LAYER 1: SOFT BACKGROUND BLOSSOM CLUSTERS & FOLIAGE HALO
+           ============================================================== -->
+      <g opacity="0.52" filter="url(#petal-glow-tl)">
+        <circle cx="65" cy="48" r="34" fill="#F9B4B7" />
+        <circle cx="152" cy="58" r="38" fill="#FFE3E5" />
+        <circle cx="248" cy="72" r="36" fill="#F9B4B7" />
+        <circle cx="348" cy="82" r="34" fill="#FFE3E5" />
+        <circle cx="445" cy="108" r="30" fill="#F9B4B7" />
+        <circle cx="525" cy="126" r="24" fill="#FFE3E5" />
+        <circle cx="118" cy="128" r="34" fill="#FFE3E5" />
+        <circle cx="215" cy="152" r="36" fill="#F9B4B7" />
+        <circle cx="312" cy="186" r="32" fill="#FFE3E5" />
+        <circle cx="398" cy="218" r="26" fill="#F9B4B7" />
+        <circle cx="58" cy="215" r="32" fill="#FFE3E5" />
+        <circle cx="148" cy="245" r="28" fill="#F9B4B7" />
+        <circle cx="236" cy="296" r="26" fill="#FFE3E5" />
+        <circle cx="38" cy="318" r="26" fill="#F9B4B7" />
+      </g>
+
+      <!-- ==============================================================
+           LAYER 2: SERRATED SAKURA LEAVES (SAGE GREEN & BRONZE-RUSSET)
+           ============================================================== -->
+      <g>
+        <use href="#sakura-leaf-g" transform="translate(52,32) rotate(68) scale(1.1)" />
+        <use href="#sakura-leaf-b" transform="translate(94,28) rotate(115) scale(1.05)" />
+        <use href="#sakura-leaf-g" transform="translate(136,46) rotate(48) scale(1.15)" />
+        <use href="#sakura-leaf-g" transform="translate(168,72) rotate(138) scale(1.0)" />
+        <use href="#sakura-leaf-b" transform="translate(212,48) rotate(75) scale(1.12)" />
+        <use href="#sakura-leaf-g" transform="translate(268,56) rotate(105) scale(1.18)" />
+        <use href="#sakura-leaf-b" transform="translate(318,62) rotate(58) scale(1.05)" />
+        <use href="#sakura-leaf-g" transform="translate(372,72) rotate(125) scale(1.1)" />
+        <use href="#sakura-leaf-g" transform="translate(428,92) rotate(82) scale(1.08)" />
+        <use href="#sakura-leaf-b" transform="translate(486,108) rotate(112) scale(0.95)" />
+        <use href="#sakura-leaf-g" transform="translate(538,122) rotate(95) scale(0.9)" />
+
+        <use href="#sakura-leaf-b" transform="translate(88,105) rotate(145) scale(1.1)" />
+        <use href="#sakura-leaf-g" transform="translate(148,118) rotate(62) scale(1.15)" />
+        <use href="#sakura-leaf-g" transform="translate(198,136) rotate(132) scale(1.1)" />
+        <use href="#sakura-leaf-b" transform="translate(256,158) rotate(78) scale(1.08)" />
+        <use href="#sakura-leaf-g" transform="translate(318,176) rotate(118) scale(1.05)" />
+        <use href="#sakura-leaf-b" transform="translate(376,204) rotate(88) scale(1.0)" />
+        <use href="#sakura-leaf-g" transform="translate(428,228) rotate(115) scale(0.92)" />
+
+        <use href="#sakura-leaf-g" transform="translate(42,178) rotate(155) scale(1.12)" />
+        <use href="#sakura-leaf-b" transform="translate(96,192) rotate(128) scale(1.05)" />
+        <use href="#sakura-leaf-g" transform="translate(146,218) rotate(142) scale(1.08)" />
+        <use href="#sakura-leaf-b" transform="translate(196,258) rotate(118) scale(1.0)" />
+        <use href="#sakura-leaf-g" transform="translate(248,304) rotate(135) scale(0.95)" />
+        <use href="#sakura-leaf-g" transform="translate(28,278) rotate(168) scale(1.05)" />
+        <use href="#sakura-leaf-b" transform="translate(18,358) rotate(158) scale(0.95)" />
+      </g>
+
+      <!-- ==============================================================
+           LAYER 3: REALISTIC GNARLED WOODY BOUGHS, BARK HIGHLIGHTS & TWIGS
+           Note: Chime-Bearing Bough passes through exact point (136, 62)!
+           ============================================================== -->
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <!-- Deep Shadow Bark Underlayer -->
+        <path d="M-28,14 C85,22 205,38 328,68 C416,90 488,110 556,128" stroke="#462E23" stroke-width="18" />
+        <path d="M-24,38 C76,62 168,96 262,142 C332,176 392,206 446,234" stroke="#462E23" stroke-width="14" />
+        <!-- Chime-Bearing Horizontal Bough passing directly through (136, 62) -->
+        <path d="M-20,56 C38,55 88,57 136,62 C178,66 216,76 254,92" stroke="#462E23" stroke-width="11.5" />
+        <path d="M-22,98 C46,126 108,164 164,214 C210,255 246,298 282,342" stroke="#462E23" stroke-width="12" />
+        <path d="M48,128 C40,196 32,262 18,332 C12,368 8,402 4,432" stroke="#462E23" stroke-width="9.5" />
+
+        <!-- Primary Warm Walnut Bark (#725344) -->
+        <path d="M-28,12 C85,20 205,36 328,66 C416,88 488,108 556,126" stroke="#725344" stroke-width="15" />
+        <path d="M-24,36 C76,60 168,94 262,140 C332,174 392,204 446,232" stroke="#725344" stroke-width="11.5" />
+        <path d="M-20,55 C38,54 88,56 136,61 C178,65 216,75 254,91" stroke="#725344" stroke-width="9.5" />
+        <path d="M-22,96 C46,124 108,162 164,212 C210,253 246,296 282,340" stroke="#725344" stroke-width="9.5" />
+        <path d="M48,126 C40,194 32,260 18,330 C12,366 8,400 4,430" stroke="#725344" stroke-width="7.5" />
+
+        <!-- Secondary & Tertiary Branching Twigs -->
+        <path d="M115,24 C162,12 214,8 268,16" stroke="#725344" stroke-width="6.5" />
+        <path d="M235,44 C288,28 342,24 396,34" stroke="#725344" stroke-width="6" />
+        <path d="M352,72 C404,58 454,56 504,68" stroke="#725344" stroke-width="5" />
+        <path d="M442,96 C484,88 524,88 564,98" stroke="#725344" stroke-width="4" />
+        <path d="M136,61 C158,84 184,104 218,118" stroke="#725344" stroke-width="5.5" />
+        <path d="M188,104 C228,94 268,96 308,112" stroke="#725344" stroke-width="5.5" />
+        <path d="M278,148 C322,140 364,146 406,164" stroke="#725344" stroke-width="5" />
+        <path d="M224,122 C238,164 256,202 284,236" stroke="#725344" stroke-width="5" />
+        <path d="M332,174 C344,212 362,244 388,272" stroke="#725344" stroke-width="4.5" />
+        <path d="M108,162 C98,212 86,258 68,302" stroke="#725344" stroke-width="5.5" />
+        <path d="M164,212 C152,258 138,298 118,336" stroke="#725344" stroke-width="4.8" />
+        <path d="M218,262 C208,302 196,338 178,372" stroke="#725344" stroke-width="4" />
+        <path d="M36,216 C64,242 88,272 106,306" stroke="#725344" stroke-width="4.2" />
+
+        <!-- Fine Terminal Twigs -->
+        <path d="M268,16 C292,10 316,12 338,20" stroke="#9E7662" stroke-width="3" />
+        <path d="M396,34 C422,28 448,32 472,42" stroke="#9E7662" stroke-width="2.8" />
+        <path d="M504,68 C532,64 558,68 582,78" stroke="#9E7662" stroke-width="2.5" />
+        <path d="M556,126 C578,132 598,142 614,154" stroke="#9E7662" stroke-width="2.8" />
+        <path d="M446,232 C468,244 488,258 504,274" stroke="#9E7662" stroke-width="2.8" />
+        <path d="M282,340 C298,362 312,384 324,406" stroke="#9E7662" stroke-width="2.8" />
+
+        <!-- Upper Edge Moonlight Bark Highlights (#9E7662 & #C49B82) -->
+        <path d="M-24,8 C86,16 206,32 328,62 C412,83 482,102 548,120" stroke="#9E7662" stroke-width="5" opacity="0.85" />
+        <path d="M-20,33 C78,56 168,90 262,136 C328,168 386,198 438,226" stroke="#9E7662" stroke-width="4" opacity="0.8" />
+        <path d="M-18,52 C38,51 88,53 136,58 C176,62 212,72 248,87" stroke="#C49B82" stroke-width="3.2" opacity="0.85" />
+        <path d="M-18,93 C48,120 108,158 164,208 C206,246 242,288 276,332" stroke="#9E7662" stroke-width="3.5" opacity="0.78" />
+      </g>
+
+      <!-- ==============================================================
+           LAYER 4: UNOPENED SAKURA BUDS ALONG OUTER TWIG TIPS
+           ============================================================== -->
+      <g>
+        <use href="#sakura-bud" transform="translate(342,22) rotate(72) scale(0.95)" />
+        <use href="#sakura-bud" transform="translate(476,44) rotate(68) scale(0.9)" />
+        <use href="#sakura-bud" transform="translate(584,80) rotate(78) scale(0.9)" />
+        <use href="#sakura-bud" transform="translate(568,100) rotate(84) scale(0.85)" />
+        <use href="#sakura-bud" transform="translate(612,152) rotate(108) scale(0.9)" />
+        <use href="#sakura-bud" transform="translate(412,166) rotate(98) scale(0.92)" />
+        <use href="#sakura-bud" transform="translate(502,272) rotate(124) scale(0.88)" />
+        <use href="#sakura-bud" transform="translate(392,276) rotate(138) scale(0.9)" />
+        <use href="#sakura-bud" transform="translate(288,240) rotate(142) scale(0.95)" />
+        <use href="#sakura-bud" transform="translate(322,404) rotate(148) scale(0.88)" />
+        <use href="#sakura-bud" transform="translate(178,374) rotate(162) scale(0.9)" />
+        <use href="#sakura-bud" transform="translate(116,338) rotate(156) scale(0.92)" />
+        <use href="#sakura-bud" transform="translate(66,304) rotate(165) scale(0.95)" />
+        <use href="#sakura-bud" transform="translate(6,432) rotate(172) scale(0.9)" />
+      </g>
+
+      <!-- ==============================================================
+           LAYER 5: DENSE FOREGROUND 5-PETAL SAKURA BLOSSOMS
+           ============================================================== -->
       <g filter="url(#petal-glow-tl)">
-        <!-- Cluster A -->
-        <circle cx="88" cy="40" r="22" fill="#FFE3E5" opacity="0.92" />
-        <circle cx="116" cy="54" r="17" fill="#F9B4B7" opacity="0.88" />
-        <circle cx="66" cy="52" r="15" fill="#FFE3E5" opacity="0.86" />
-        <circle cx="86" cy="42" r="5" fill="#F2797B" />
-        <!-- Cluster B -->
-        <circle cx="238" cy="96" r="24" fill="#FFE3E5" opacity="0.92" />
-        <circle cx="268" cy="110" r="18" fill="#F9B4B7" opacity="0.88" />
-        <circle cx="212" cy="108" r="16" fill="#FFE3E5" opacity="0.85" />
-        <circle cx="236" cy="98" r="5.5" fill="#F2797B" />
-        <!-- Cluster C -->
-        <circle cx="362" cy="62" r="19" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="384" cy="70" r="14" fill="#F9B4B7" opacity="0.86" />
-        <circle cx="358" cy="64" r="4.5" fill="#F2797B" />
-        <!-- Cluster D -->
-        <circle cx="416" cy="168" r="20" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="394" cy="178" r="15" fill="#F9B4B7" opacity="0.86" />
-        <circle cx="436" cy="176" r="13" fill="#FFE3E5" opacity="0.84" />
-        <circle cx="414" cy="170" r="4.5" fill="#F2797B" />
-        <!-- Cluster E -->
-        <circle cx="242" cy="158" r="19" fill="#FFE3E5" opacity="0.88" />
-        <circle cx="222" cy="168" r="14" fill="#F9B4B7" opacity="0.84" />
-        <circle cx="316" cy="228" r="18" fill="#FFE3E5" opacity="0.88" />
-        <circle cx="298" cy="238" r="14" fill="#F9B4B7" opacity="0.84" />
-        <!-- Cluster F -->
-        <circle cx="312" cy="262" r="20" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="292" cy="272" r="15" fill="#F9B4B7" opacity="0.85" />
-        <circle cx="62" cy="242" r="19" fill="#FFE3E5" opacity="0.88" />
-        <circle cx="44" cy="254" r="14" fill="#F9B4B7" opacity="0.84" />
-        <circle cx="136" cy="276" r="17" fill="#FFE3E5" opacity="0.86" />
-        <circle cx="118" cy="286" r="13" fill="#F9B4B7" opacity="0.82" />
+        <!-- Upper Canopy Blossoms -->
+        <use href="#sakura-blossom" transform="translate(46,24) rotate(12) scale(1.22)" />
+        <use href="#sakura-blossom-deep" transform="translate(78,34) rotate(38) scale(0.96)" />
+        <use href="#sakura-blossom" transform="translate(118,22) rotate(-18) scale(1.15)" />
+        <use href="#sakura-blossom" transform="translate(164,18) rotate(24) scale(1.05)" />
+        <use href="#sakura-blossom-deep" transform="translate(208,28) rotate(52) scale(0.92)" />
+        <use href="#sakura-blossom" transform="translate(254,18) rotate(-8) scale(1.12)" />
+        <use href="#sakura-blossom" transform="translate(298,28) rotate(31) scale(0.95)" />
+        <use href="#sakura-blossom-deep" transform="translate(338,42) rotate(16) scale(1.08)" />
+        <use href="#sakura-blossom" transform="translate(384,34) rotate(-22) scale(1.14)" />
+        <use href="#sakura-blossom" transform="translate(428,52) rotate(44) scale(0.96)" />
+        <use href="#sakura-blossom-deep" transform="translate(468,68) rotate(19) scale(1.04)" />
+        <use href="#sakura-blossom" transform="translate(508,68) rotate(-14) scale(1.1)" />
+        <use href="#sakura-blossom" transform="translate(548,94) rotate(28) scale(0.92)" />
+        <use href="#sakura-blossom-deep" transform="translate(558,126) rotate(48) scale(1.05)" />
+        <use href="#sakura-blossom" transform="translate(588,138) rotate(-12) scale(0.84)" />
+
+        <!-- Around Chime Attachment Node (136, 62) & Middle Boughs -->
+        <use href="#sakura-blossom" transform="translate(92,58) rotate(-25) scale(1.16)" />
+        <use href="#sakura-blossom-deep" transform="translate(116,66) rotate(18) scale(0.92)" />
+        <use href="#sakura-blossom" transform="translate(162,64) rotate(34) scale(1.18)" />
+        <use href="#sakura-blossom-deep" transform="translate(192,76) rotate(-16) scale(0.95)" />
+        <use href="#sakura-blossom" transform="translate(238,84) rotate(22) scale(1.14)" />
+        <use href="#sakura-blossom" transform="translate(278,72) rotate(-32) scale(1.02)" />
+        <use href="#sakura-blossom-deep" transform="translate(316,88) rotate(14) scale(0.94)" />
+        <use href="#sakura-blossom" transform="translate(364,96) rotate(42) scale(1.12)" />
+        <use href="#sakura-blossom" transform="translate(414,108) rotate(-18) scale(1.0)" />
+        <use href="#sakura-blossom-deep" transform="translate(458,118) rotate(26) scale(0.9)" />
+
+        <!-- Mid-Lower Canopy Blossoms -->
+        <use href="#sakura-blossom" transform="translate(44,98) rotate(15) scale(1.18)" />
+        <use href="#sakura-blossom-deep" transform="translate(76,118) rotate(-28) scale(0.98)" />
+        <use href="#sakura-blossom" transform="translate(124,108) rotate(36) scale(1.1)" />
+        <use href="#sakura-blossom" transform="translate(168,118) rotate(-14) scale(1.15)" />
+        <use href="#sakura-blossom-deep" transform="translate(208,132) rotate(48) scale(0.96)" />
+        <use href="#sakura-blossom" transform="translate(252,138) rotate(12) scale(1.2)" />
+        <use href="#sakura-blossom" transform="translate(296,116) rotate(-24) scale(1.0)" />
+        <use href="#sakura-blossom-deep" transform="translate(292,162) rotate(29) scale(1.06)" />
+        <use href="#sakura-blossom" transform="translate(336,178) rotate(-19) scale(1.14)" />
+        <use href="#sakura-blossom" transform="translate(382,162) rotate(38) scale(0.95)" />
+        <use href="#sakura-blossom-deep" transform="translate(386,204) rotate(14) scale(1.04)" />
+        <use href="#sakura-blossom" transform="translate(436,228) rotate(-22) scale(1.1)" />
+        <use href="#sakura-blossom" transform="translate(468,248) rotate(32) scale(0.88)" />
+
+        <!-- Lower Hanging Bough Blossoms -->
+        <use href="#sakura-blossom" transform="translate(48,162) rotate(-16) scale(1.14)" />
+        <use href="#sakura-blossom-deep" transform="translate(106,166) rotate(28) scale(1.02)" />
+        <use href="#sakura-blossom" transform="translate(156,208) rotate(-24) scale(1.16)" />
+        <use href="#sakura-blossom-deep" transform="translate(192,232) rotate(19) scale(0.96)" />
+        <use href="#sakura-blossom" transform="translate(238,224) rotate(42) scale(1.04)" />
+        <use href="#sakura-blossom" transform="translate(274,232) rotate(-12) scale(0.92)" />
+        <use href="#sakura-blossom" transform="translate(226,276) rotate(24) scale(1.1)" />
+        <use href="#sakura-blossom-deep" transform="translate(262,312) rotate(-28) scale(0.98)" />
+        <use href="#sakura-blossom" transform="translate(286,344) rotate(16) scale(1.06)" />
+        <use href="#sakura-blossom" transform="translate(306,374) rotate(-18) scale(0.86)" />
+
+        <!-- Left Edge Cascading Blossoms -->
+        <use href="#sakura-blossom" transform="translate(36,218) rotate(34) scale(1.12)" />
+        <use href="#sakura-blossom-deep" transform="translate(88,248) rotate(-22) scale(0.96)" />
+        <use href="#sakura-blossom" transform="translate(72,292) rotate(18) scale(1.04)" />
+        <use href="#sakura-blossom" transform="translate(134,298) rotate(-15) scale(1.0)" />
+        <use href="#sakura-blossom-deep" transform="translate(122,332) rotate(28) scale(0.88)" />
+        <use href="#sakura-blossom" transform="translate(26,284) rotate(-26) scale(1.08)" />
+        <use href="#sakura-blossom-deep" transform="translate(18,338) rotate(22) scale(0.96)" />
+        <use href="#sakura-blossom" transform="translate(12,388) rotate(-14) scale(0.9)" />
       </g>
     </svg>
   </div>
 
-  <!-- BOTTOM-RIGHT SAKURA BOUGH -->
+  <!-- BOTTOM-RIGHT LUSH REALISTIC SAKURA CANOPY -->
   <div class="sakura-corner sakura-corner--bottom-right" aria-hidden="true">
-    <svg viewBox="0 0 540 390" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="petal-glow-br" x="-25%" y="-25%" width="150%" height="150%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-      </defs>
-      <!-- Main Bottom-Right Woody Boughs Growing Inward & Upward -->
-      <path d="M555,368 C450,348 355,310 255,256 C190,220 135,196 82,178" stroke="#725344" stroke-width="11.5" stroke-linecap="round" />
-      <path d="M550,372 C448,352 352,314 252,260 C192,226 140,202 90,184" stroke="#9E7662" stroke-width="4.5" stroke-linecap="round" opacity="0.8" />
-      <path d="M552,286 C472,268 398,236 332,188 C282,152 242,118 204,86" stroke="#725344" stroke-width="8.5" stroke-linecap="round" />
-      <!-- Secondary Twigs -->
-      <path d="M395,326 C358,278 322,238 272,204" stroke="#9E7662" stroke-width="5" stroke-linecap="round" />
-      <path d="M302,282 C252,306 198,318 142,312" stroke="#725344" stroke-width="5" stroke-linecap="round" />
-      <path d="M438,256 C448,204 458,158 478,114" stroke="#725344" stroke-width="5" stroke-linecap="round" />
-      <path d="M352,204 C366,154 378,114 402,76" stroke="#9E7662" stroke-width="4.2" stroke-linecap="round" />
-      <path d="M255,256 C240,206 226,164 202,126" stroke="#725344" stroke-width="4.5" stroke-linecap="round" />
+    <svg viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Mirroring Realistic Sakura Canopy Growing from Bottom-Right (640, 480) -->
+      <g transform="translate(640, 480) scale(-1, -1)">
+        <!-- Layer 1: Soft Blossom Glow Halo -->
+        <g opacity="0.5" filter="url(#petal-glow-tl)">
+          <circle cx="65" cy="48" r="34" fill="#F9B4B7" />
+          <circle cx="152" cy="58" r="38" fill="#FFE3E5" />
+          <circle cx="248" cy="72" r="36" fill="#F9B4B7" />
+          <circle cx="348" cy="82" r="34" fill="#FFE3E5" />
+          <circle cx="445" cy="108" r="30" fill="#F9B4B7" />
+          <circle cx="118" cy="128" r="34" fill="#FFE3E5" />
+          <circle cx="215" cy="152" r="36" fill="#F9B4B7" />
+          <circle cx="312" cy="186" r="32" fill="#FFE3E5" />
+          <circle cx="398" cy="218" r="26" fill="#F9B4B7" />
+          <circle cx="58" cy="215" r="32" fill="#FFE3E5" />
+          <circle cx="148" cy="245" r="28" fill="#F9B4B7" />
+          <circle cx="236" cy="296" r="26" fill="#FFE3E5" />
+        </g>
 
-      <!-- Glowing Pastel Sakura Clusters -->
-      <g filter="url(#petal-glow-br)">
-        <!-- Cluster 1 -->
-        <circle cx="446" cy="340" r="23" fill="#FFE3E5" opacity="0.92" />
-        <circle cx="416" cy="324" r="18" fill="#F9B4B7" opacity="0.88" />
-        <circle cx="472" cy="328" r="16" fill="#FFE3E5" opacity="0.86" />
-        <circle cx="448" cy="338" r="5" fill="#F2797B" />
-        <!-- Cluster 2 -->
-        <circle cx="288" cy="274" r="24" fill="#FFE3E5" opacity="0.92" />
-        <circle cx="258" cy="258" r="18" fill="#F9B4B7" opacity="0.88" />
-        <circle cx="316" cy="262" r="16" fill="#FFE3E5" opacity="0.85" />
-        <circle cx="290" cy="272" r="5.5" fill="#F2797B" />
-        <!-- Cluster 3 -->
-        <circle cx="154" cy="312" r="19" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="132" cy="304" r="14" fill="#F9B4B7" opacity="0.86" />
-        <circle cx="158" cy="310" r="4.5" fill="#F2797B" />
-        <!-- Cluster 4 -->
-        <circle cx="96" cy="182" r="20" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="120" cy="172" r="15" fill="#F9B4B7" opacity="0.86" />
-        <circle cx="76" cy="174" r="13" fill="#FFE3E5" opacity="0.84" />
-        <circle cx="98" cy="180" r="4.5" fill="#F2797B" />
-        <!-- Cluster 5 -->
-        <circle cx="208" cy="92" r="20" fill="#FFE3E5" opacity="0.9" />
-        <circle cx="228" cy="82" r="15" fill="#F9B4B7" opacity="0.85" />
-        <circle cx="206" cy="130" r="18" fill="#FFE3E5" opacity="0.88" />
-        <circle cx="224" cy="120" r="14" fill="#F9B4B7" opacity="0.84" />
-        <!-- Cluster 6 -->
-        <circle cx="474" cy="120" r="19" fill="#FFE3E5" opacity="0.88" />
-        <circle cx="492" cy="108" r="14" fill="#F9B4B7" opacity="0.84" />
-        <circle cx="398" cy="82" r="17" fill="#FFE3E5" opacity="0.86" />
-        <circle cx="416" cy="72" r="13" fill="#F9B4B7" opacity="0.82" />
+        <!-- Layer 2: Serrated Sakura Leaves -->
+        <g>
+          <use href="#sakura-leaf-g" transform="translate(52,32) rotate(68) scale(1.1)" />
+          <use href="#sakura-leaf-b" transform="translate(94,28) rotate(115) scale(1.05)" />
+          <use href="#sakura-leaf-g" transform="translate(156,48) rotate(52) scale(1.15)" />
+          <use href="#sakura-leaf-b" transform="translate(212,48) rotate(75) scale(1.12)" />
+          <use href="#sakura-leaf-g" transform="translate(268,56) rotate(105) scale(1.18)" />
+          <use href="#sakura-leaf-b" transform="translate(318,62) rotate(58) scale(1.05)" />
+          <use href="#sakura-leaf-g" transform="translate(372,72) rotate(125) scale(1.1)" />
+          <use href="#sakura-leaf-g" transform="translate(428,92) rotate(82) scale(1.08)" />
+          <use href="#sakura-leaf-b" transform="translate(486,108) rotate(112) scale(0.95)" />
+          <use href="#sakura-leaf-b" transform="translate(88,105) rotate(145) scale(1.1)" />
+          <use href="#sakura-leaf-g" transform="translate(148,118) rotate(62) scale(1.15)" />
+          <use href="#sakura-leaf-g" transform="translate(198,136) rotate(132) scale(1.1)" />
+          <use href="#sakura-leaf-b" transform="translate(256,158) rotate(78) scale(1.08)" />
+          <use href="#sakura-leaf-g" transform="translate(318,176) rotate(118) scale(1.05)" />
+          <use href="#sakura-leaf-b" transform="translate(376,204) rotate(88) scale(1.0)" />
+          <use href="#sakura-leaf-g" transform="translate(42,178) rotate(155) scale(1.12)" />
+          <use href="#sakura-leaf-b" transform="translate(96,192) rotate(128) scale(1.05)" />
+          <use href="#sakura-leaf-g" transform="translate(146,218) rotate(142) scale(1.08)" />
+          <use href="#sakura-leaf-b" transform="translate(196,258) rotate(118) scale(1.0)" />
+          <use href="#sakura-leaf-g" transform="translate(248,304) rotate(135) scale(0.95)" />
+          <use href="#sakura-leaf-g" transform="translate(28,278) rotate(168) scale(1.05)" />
+        </g>
+
+        <!-- Layer 3: Gnarled Woody Boughs & Twigs -->
+        <g stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-28,14 C85,22 205,38 328,68 C416,90 488,110 556,128" stroke="#462E23" stroke-width="18" />
+          <path d="M-24,38 C76,62 168,96 262,142 C332,176 392,206 446,234" stroke="#462E23" stroke-width="14" />
+          <path d="M-22,98 C46,126 108,164 164,214 C210,255 246,298 282,342" stroke="#462E23" stroke-width="12" />
+          <path d="M48,128 C40,196 32,262 18,332 C12,368 8,402 4,432" stroke="#462E23" stroke-width="9.5" />
+
+          <path d="M-28,12 C85,20 205,36 328,66 C416,88 488,108 556,126" stroke="#725344" stroke-width="15" />
+          <path d="M-24,36 C76,60 168,94 262,140 C332,174 392,204 446,232" stroke="#725344" stroke-width="11.5" />
+          <path d="M-22,96 C46,124 108,162 164,212 C210,253 246,296 282,340" stroke="#725344" stroke-width="9.5" />
+          <path d="M48,126 C40,194 32,260 18,330 C12,366 8,400 4,430" stroke="#725344" stroke-width="7.5" />
+
+          <path d="M115,24 C162,12 214,8 268,16" stroke="#725344" stroke-width="6.5" />
+          <path d="M235,44 C288,28 342,24 396,34" stroke="#725344" stroke-width="6" />
+          <path d="M352,72 C404,58 454,56 504,68" stroke="#725344" stroke-width="5" />
+          <path d="M188,104 C228,94 268,96 308,112" stroke="#725344" stroke-width="5.5" />
+          <path d="M278,148 C322,140 364,146 406,164" stroke="#725344" stroke-width="5" />
+          <path d="M224,122 C238,164 256,202 284,236" stroke="#725344" stroke-width="5" />
+          <path d="M332,174 C344,212 362,244 388,272" stroke="#725344" stroke-width="4.5" />
+          <path d="M108,162 C98,212 86,258 68,302" stroke="#725344" stroke-width="5.5" />
+          <path d="M164,212 C152,258 138,298 118,336" stroke="#725344" stroke-width="4.8" />
+
+          <path d="M-24,8 C86,16 206,32 328,62 C412,83 482,102 548,120" stroke="#9E7662" stroke-width="5" opacity="0.85" />
+          <path d="M-20,33 C78,56 168,90 262,136 C328,168 386,198 438,226" stroke="#9E7662" stroke-width="4" opacity="0.8" />
+          <path d="M-18,93 C48,120 108,158 164,208 C206,246 242,288 276,332" stroke="#9E7662" stroke-width="3.5" opacity="0.78" />
+        </g>
+
+        <!-- Layer 4: Unopened Buds -->
+        <g>
+          <use href="#sakura-bud" transform="translate(342,22) rotate(72) scale(0.95)" />
+          <use href="#sakura-bud" transform="translate(508,68) rotate(78) scale(0.9)" />
+          <use href="#sakura-bud" transform="translate(560,128) rotate(102) scale(0.9)" />
+          <use href="#sakura-bud" transform="translate(412,166) rotate(98) scale(0.92)" />
+          <use href="#sakura-bud" transform="translate(450,236) rotate(120) scale(0.9)" />
+          <use href="#sakura-bud" transform="translate(392,276) rotate(138) scale(0.9)" />
+          <use href="#sakura-bud" transform="translate(286,344) rotate(148) scale(0.9)" />
+          <use href="#sakura-bud" transform="translate(116,338) rotate(156) scale(0.92)" />
+          <use href="#sakura-bud" transform="translate(66,304) rotate(165) scale(0.95)" />
+        </g>
+
+        <!-- Layer 5: 5-Petal Sakura Blossoms -->
+        <g filter="url(#petal-glow-tl)">
+          <use href="#sakura-blossom" transform="translate(46,24) rotate(12) scale(1.22)" />
+          <use href="#sakura-blossom-deep" transform="translate(88,36) rotate(38) scale(0.96)" />
+          <use href="#sakura-blossom" transform="translate(132,24) rotate(-18) scale(1.15)" />
+          <use href="#sakura-blossom" transform="translate(184,22) rotate(24) scale(1.05)" />
+          <use href="#sakura-blossom-deep" transform="translate(228,32) rotate(52) scale(0.92)" />
+          <use href="#sakura-blossom" transform="translate(268,20) rotate(-8) scale(1.12)" />
+          <use href="#sakura-blossom-deep" transform="translate(338,42) rotate(16) scale(1.08)" />
+          <use href="#sakura-blossom" transform="translate(384,34) rotate(-22) scale(1.14)" />
+          <use href="#sakura-blossom" transform="translate(432,56) rotate(44) scale(0.96)" />
+          <use href="#sakura-blossom-deep" transform="translate(476,72) rotate(19) scale(1.04)" />
+          <use href="#sakura-blossom" transform="translate(528,112) rotate(28) scale(1.02)" />
+
+          <use href="#sakura-blossom" transform="translate(76,72) rotate(-25) scale(1.14)" />
+          <use href="#sakura-blossom-deep" transform="translate(136,84) rotate(18) scale(0.98)" />
+          <use href="#sakura-blossom" transform="translate(188,96) rotate(34) scale(1.16)" />
+          <use href="#sakura-blossom" transform="translate(248,96) rotate(22) scale(1.12)" />
+          <use href="#sakura-blossom-deep" transform="translate(308,108) rotate(14) scale(0.96)" />
+          <use href="#sakura-blossom" transform="translate(364,96) rotate(42) scale(1.12)" />
+          <use href="#sakura-blossom" transform="translate(418,112) rotate(-18) scale(1.0)" />
+
+          <use href="#sakura-blossom" transform="translate(44,112) rotate(15) scale(1.18)" />
+          <use href="#sakura-blossom-deep" transform="translate(106,138) rotate(-28) scale(0.98)" />
+          <use href="#sakura-blossom" transform="translate(168,132) rotate(-14) scale(1.15)" />
+          <use href="#sakura-blossom" transform="translate(248,142) rotate(12) scale(1.2)" />
+          <use href="#sakura-blossom-deep" transform="translate(292,162) rotate(29) scale(1.06)" />
+          <use href="#sakura-blossom" transform="translate(336,178) rotate(-19) scale(1.14)" />
+          <use href="#sakura-blossom" transform="translate(396,196) rotate(38) scale(1.02)" />
+          <use href="#sakura-blossom-deep" transform="translate(436,228) rotate(-22) scale(1.08)" />
+
+          <use href="#sakura-blossom" transform="translate(48,176) rotate(-16) scale(1.14)" />
+          <use href="#sakura-blossom" transform="translate(156,208) rotate(-24) scale(1.16)" />
+          <use href="#sakura-blossom-deep" transform="translate(204,242) rotate(19) scale(0.98)" />
+          <use href="#sakura-blossom" transform="translate(274,232) rotate(-12) scale(0.96)" />
+          <use href="#sakura-blossom" transform="translate(248,298) rotate(24) scale(1.08)" />
+          <use href="#sakura-blossom-deep" transform="translate(282,336) rotate(-28) scale(0.98)" />
+          <use href="#sakura-blossom" transform="translate(36,232) rotate(34) scale(1.1)" />
+          <use href="#sakura-blossom" transform="translate(72,292) rotate(18) scale(1.04)" />
+          <use href="#sakura-blossom-deep" transform="translate(22,324) rotate(22) scale(0.98)" />
+        </g>
       </g>
     </svg>
   </div>
@@ -164,7 +461,7 @@
   <canvas id="sakura-canvas" aria-hidden="true"></canvas>
 
   <!-- ========================================================================
-       4. INTERACTIVE WIND CHIME (FŪRIN) — HANGING FROM TOP-LEFT SAKURA BRANCH
+       4. INTERACTIVE WIND CHIME (FŪRIN) — PHYSICALLY TIED TO SAKURA BRANCH
        With soothing Web Audio chime & accessible Mute/Unmute button
        ======================================================================== -->
   <div class="furin-corner-dock reveal-item reveal-delay-1">
@@ -177,33 +474,53 @@
       title="Hover or click to ring the wind chime"
     >
       <div class="furin-ripple"></div>
-      <svg class="furin-svg" viewBox="0 0 72 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="furin-svg" viewBox="0 0 84 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Branch Segment & Silk Knot Anchor (Physically connects Fūrin to the Sakura Bough on Desktop & Mobile) -->
+        <g class="furin-branch-anchor">
+          <!-- Woody Branch Segment Passing Through the Chime Knot -->
+          <path d="M-12,7 C14,8 42,10 92,15" stroke="#462E23" stroke-width="10.5" stroke-linecap="round" />
+          <path d="M-12,6 C14,7 42,9 92,14" stroke="#725344" stroke-width="8.5" stroke-linecap="round" />
+          <path d="M-10,4 C16,5 42,7 90,12" stroke="#C49B82" stroke-width="2.6" stroke-linecap="round" opacity="0.85" />
+          <!-- Small Twig & Leaves at Attachment Point -->
+          <use href="#sakura-leaf-g" transform="translate(24,8) rotate(125) scale(0.72)" />
+          <use href="#sakura-leaf-b" transform="translate(58,12) rotate(65) scale(0.68)" />
+          <!-- Tied Silk Cord Loops Wrapped Around the Sakura Branch at x=42, y=9 -->
+          <rect x="38.5" y="3.5" width="7" height="11" rx="3" fill="#DFB1A5" stroke="#5A3E31" stroke-width="1" />
+          <line x1="40.8" y1="4" x2="40.8" y2="14" stroke="#FAF8F5" stroke-width="1.1" opacity="0.85" />
+          <line x1="43.2" y1="4" x2="43.2" y2="14" stroke="#FAF8F5" stroke-width="1.1" opacity="0.85" />
+          <!-- Blossom & Bud Hugging the Branch Knot -->
+          <use href="#sakura-blossom" transform="translate(22,8) rotate(-18) scale(0.62)" />
+          <use href="#sakura-blossom-deep" transform="translate(62,12) rotate(28) scale(0.54)" />
+        </g>
+
+        <!-- Swinging Bell Assembly Hanging from the Branch Knot (Pivot at 42, 12) -->
         <g class="furin-bell-group">
-          <!-- Silk Cord from Sakura Branch -->
-          <line x1="36" y1="0" x2="36" y2="24" stroke="#DFB1A5" stroke-width="2" stroke-linecap="round" />
-          <circle cx="36" cy="24" r="3" fill="#725344" />
+          <!-- Silk Cord Hanging Down from Branch Knot -->
+          <line x1="42" y1="12" x2="42" y2="34" stroke="#DFB1A5" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="42" cy="15" r="2.6" fill="#F2797B" />
+          <circle cx="42" cy="34" r="3.2" fill="#725344" />
           <!-- Glass Fūrin Bell -->
           <path
-            d="M15,49 C15,33 24,24 36,24 C48,24 57,33 57,49 C57,56 55,61 52,64 L20,64 C17,61 15,56 15,49 Z"
-            fill="rgba(255, 227, 229, 0.28)"
+            d="M21,59 C21,43 30,34 42,34 C54,34 63,43 63,59 C63,66 61,71 58,74 L26,74 C23,71 21,66 21,59 Z"
+            fill="rgba(255, 227, 229, 0.32)"
             stroke="#FFE3E5"
             stroke-width="1.8"
           />
           <!-- Painted Sakura Blossom on Glass -->
-          <circle cx="29" cy="44" r="4.5" fill="#F9B4B7" opacity="0.85" />
-          <circle cx="34" cy="48" r="3.5" fill="#FFE3E5" opacity="0.9" />
-          <circle cx="44" cy="41" r="3" fill="#43E8D8" opacity="0.65" />
-          <path d="M22,34 C19,39 18,46 19,53" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0.6" />
+          <circle cx="35" cy="54" r="4.5" fill="#F9B4B7" opacity="0.88" />
+          <circle cx="40" cy="58" r="3.5" fill="#FFE3E5" opacity="0.92" />
+          <circle cx="50" cy="51" r="3" fill="#43E8D8" opacity="0.68" />
+          <path d="M28,44 C25,49 24,56 25,63" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity="0.65" />
           <!-- Clapper & String -->
-          <line x1="36" y1="26" x2="36" y2="84" stroke="#DEB892" stroke-width="1.5" />
-          <circle cx="36" cy="61" r="4" fill="#9E7662" />
+          <line x1="42" y1="36" x2="42" y2="94" stroke="#DEB892" stroke-width="1.5" />
+          <circle cx="42" cy="71" r="4" fill="#9E7662" />
           <!-- Swaying Tanzaku Paper Slip -->
           <g class="furin-tanzaku">
-            <rect x="24" y="82" width="24" height="78" rx="3" fill="#FAF8F5" stroke="#DEB892" stroke-width="1.6" />
-            <path d="M25,126 Q36,118 47,128 L47,158 L25,158 Z" fill="#FFE3E5" opacity="0.75" />
-            <circle cx="36" cy="100" r="4" fill="#F9B4B7" opacity="0.85" />
-            <circle cx="36" cy="140" r="2.8" fill="#F2797B" opacity="0.75" />
-            <line x1="36" y1="110" x2="36" y2="130" stroke="#9E7662" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" />
+            <rect x="30" y="92" width="24" height="78" rx="3" fill="#FAF8F5" stroke="#DEB892" stroke-width="1.6" />
+            <path d="M31,136 Q42,128 53,138 L53,168 L31,168 Z" fill="#FFE3E5" opacity="0.78" />
+            <circle cx="42" cy="110" r="4" fill="#F9B4B7" opacity="0.88" />
+            <circle cx="42" cy="150" r="2.8" fill="#F2797B" opacity="0.78" />
+            <line x1="42" y1="120" x2="42" y2="140" stroke="#9E7662" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 3" />
           </g>
         </g>
       </svg>
@@ -393,17 +710,12 @@
                       <span class="polaroid-chip">senior thesis</span>
                       <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
                       <div class="polaroid-bg-layer">
-                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-                          <rect width="320" height="200" fill="#172E52" />
-                          <circle cx="160" cy="100" r="72" stroke="#43E8D8" stroke-width="1.6" stroke-dasharray="5 5" fill="none" opacity="0.5" />
-                          <circle cx="160" cy="100" r="48" stroke="#F9B4B7" stroke-width="2" fill="none" opacity="0.65" />
-                          <rect x="42" y="68" width="74" height="64" rx="8" fill="#FAF8F5" stroke="#DEB892" stroke-width="2.5" />
-                          <rect x="52" y="80" width="54" height="28" rx="4" fill="#1C355E" />
-                          <text x="79" y="98" fill="#43E8D8" font-family="monospace" font-size="10" text-anchor="middle">ESP32</text>
-                          <path d="M124,100 Q160,72 196,100 T258,100" fill="none" stroke="#43E8D8" stroke-width="3" stroke-linecap="round" />
-                          <rect x="206" y="68" width="72" height="64" rx="8" fill="#FAF8F5" stroke="#B7BFA8" stroke-width="2.5" />
-                          <circle cx="242" cy="100" r="18" fill="#FFE3E5" stroke="#F2797B" stroke-width="2" />
-                        </svg>
+                        <img
+                          src="./assets/project-csi-biosensor.jpg"
+                          alt="Cozy Blue Hour workspace with ESP32 microcontroller emitting Wi-Fi CSI waves toward a battery-free RFID biosensor"
+                          class="polaroid-cover-img"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                     <div class="polaroid-caption-area">
@@ -451,23 +763,12 @@
                       <span class="polaroid-chip">50k+ records</span>
                       <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
                       <div class="polaroid-bg-layer">
-                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-                          <rect width="320" height="200" fill="#1C355E" />
-                          <g stroke="#DEB892" stroke-width="1.8" opacity="0.65">
-                            <line x1="74" y1="62" x2="156" y2="50" />
-                            <line x1="74" y1="62" x2="148" y2="116" />
-                            <line x1="156" y1="50" x2="244" y2="76" />
-                            <line x1="148" y1="116" x2="244" y2="76" />
-                            <line x1="148" y1="116" x2="228" y2="148" />
-                            <line x1="88" y1="142" x2="148" y2="116" />
-                          </g>
-                          <circle cx="74" cy="62" r="14" fill="#FFE3E5" stroke="#F2797B" stroke-width="2.5" />
-                          <circle cx="156" cy="50" r="17" fill="#43E8D8" stroke="#FAF8F5" stroke-width="2.5" />
-                          <circle cx="148" cy="116" r="21" fill="#FAF8F5" stroke="#DEB892" stroke-width="3" />
-                          <circle cx="244" cy="76" r="16" fill="#F9B4B7" stroke="#FAF8F5" stroke-width="2.5" />
-                          <circle cx="228" cy="148" r="13" fill="#B7BFA8" stroke="#FAF8F5" stroke-width="2" />
-                          <circle cx="88" cy="142" r="12" fill="#DEB892" stroke="#FAF8F5" stroke-width="2" />
-                        </svg>
+                        <img
+                          src="./assets/project-academic-attention.jpg"
+                          alt="Twilight study desk with a glowing 3D self-attention neural constellation network above open notebooks and laptop"
+                          class="polaroid-cover-img"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                     <div class="polaroid-caption-area">
@@ -515,19 +816,12 @@
                       <span class="polaroid-chip">1m+ streams</span>
                       <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
                       <div class="polaroid-bg-layer">
-                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-                          <rect width="320" height="200" fill="#193158" />
-                          <rect x="38" y="34" width="244" height="132" rx="10" fill="#FAF8F5" stroke="#DFB1A5" stroke-width="2.5" />
-                          <line x1="54" y1="72" x2="264" y2="72" stroke="#E5DEC9" stroke-width="1" />
-                          <line x1="54" y1="104" x2="264" y2="104" stroke="#E5DEC9" stroke-width="1" />
-                          <line x1="54" y1="136" x2="264" y2="136" stroke="#E5DEC9" stroke-width="1" />
-                          <rect x="72" y="94" width="11" height="32" rx="2" fill="#38B899" />
-                          <rect x="108" y="76" width="11" height="38" rx="2" fill="#38B899" />
-                          <rect x="144" y="88" width="11" height="28" rx="2" fill="#F2797B" />
-                          <rect x="180" y="64" width="11" height="42" rx="2" fill="#38B899" />
-                          <rect x="216" y="52" width="11" height="40" rx="2" fill="#38B899" />
-                          <path d="M62,128 C98,108 132,82 168,92 C204,102 230,58 258,52" fill="none" stroke="#1C355E" stroke-width="2.8" stroke-linecap="round" />
-                        </svg>
+                        <img
+                          src="./assets/project-crypto-nlp.jpg"
+                          alt="Blue-hour quantitative trading desk with dual monitors displaying candlestick charts and NLP sentiment streams"
+                          class="polaroid-cover-img"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                     <div class="polaroid-caption-area">
@@ -575,21 +869,12 @@
                       <span class="polaroid-chip">digital design</span>
                       <span class="polaroid-flip-hint" aria-hidden="true">↻</span>
                       <div class="polaroid-bg-layer">
-                        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
-                          <rect width="320" height="200" fill="#1A325A" />
-                          <rect x="52" y="36" width="216" height="128" rx="10" fill="#2A473E" stroke="#B7BFA8" stroke-width="3" />
-                          <rect x="112" y="58" width="96" height="84" rx="8" fill="#FAF8F5" stroke="#DEB892" stroke-width="2.5" />
-                          <text x="160" y="98" fill="#1C355E" font-family="monospace" font-weight="bold" font-size="14" text-anchor="middle">RISC-V</text>
-                          <text x="160" y="116" fill="#725344" font-family="monospace" font-size="9" text-anchor="middle">RTL · FPGA</text>
-                          <g stroke="#DEB892" stroke-width="2" stroke-linecap="round">
-                            <line x1="74" y1="74" x2="112" y2="74" />
-                            <line x1="74" y1="100" x2="112" y2="100" />
-                            <line x1="74" y1="126" x2="112" y2="126" />
-                            <line x1="208" y1="74" x2="246" y2="74" />
-                            <line x1="208" y1="100" x2="246" y2="100" />
-                            <line x1="208" y1="126" x2="246" y2="126" />
-                          </g>
-                        </svg>
+                        <img
+                          src="./assets/project-riscv-fpga.jpg"
+                          alt="Detailed illustration of a sage-green FPGA development board with a central RISC-V processor core and glowing logic traces"
+                          class="polaroid-cover-img"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                     <div class="polaroid-caption-area">

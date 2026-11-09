@@ -167,7 +167,7 @@ button {
 
 /* ==========================================================================
    2. ATMOSPHERIC CORNER SAKURA TREES (TOP-LEFT & BOTTOM-RIGHT)
-   Never overlaps the central 580px column
+   Lush realistic multi-branch canopy framing the central 575px column
    ========================================================================== */
 .sakura-corner {
   position: fixed;
@@ -179,8 +179,8 @@ button {
 .sakura-corner--top-left {
   top: 0;
   left: 0;
-  width: min(410px, 34vw);
-  height: auto;
+  width: 640px;
+  height: 480px;
   transform-origin: top left;
   animation: swayTopLeft 12s ease-in-out infinite alternate;
 }
@@ -188,20 +188,20 @@ button {
 .sakura-corner--bottom-right {
   bottom: 0;
   right: 0;
-  width: min(430px, 35vw);
-  height: auto;
+  width: 640px;
+  height: 480px;
   transform-origin: bottom right;
   animation: swayBottomRight 14s ease-in-out infinite alternate;
 }
 
 @keyframes swayTopLeft {
   0% { transform: rotate(0deg) translateY(0); }
-  100% { transform: rotate(1.1deg) translateY(3px); }
+  100% { transform: rotate(0.95deg) translateY(2.5px); }
 }
 
 @keyframes swayBottomRight {
   0% { transform: rotate(0deg) translateY(0); }
-  100% { transform: rotate(-1.1deg) translateY(-3px); }
+  100% { transform: rotate(-0.95deg) translateY(-2.5px); }
 }
 
 /* ==========================================================================
@@ -239,28 +239,28 @@ body.is-loaded .reveal-delay-4 { transition-delay: 0.52s; }
 body.is-loaded .reveal-delay-5 { transition-delay: 0.66s; }
 
 /* ==========================================================================
-   5. CORNER INTERACTIVE WIDGET: FŪRIN WIND CHIME
+   5. CORNER INTERACTIVE WIDGET: FŪRIN WIND CHIME (TIED TO SAKURA BRANCH)
    ========================================================================== */
-/* Top-Left Fūrin Wind Chime Hanging from Sakura Branch */
+/* Positioned so the silk knot at (42, 9) in the 84x190 SVG lands at (136px, 62px) on Bough 3 */
 .furin-corner-dock {
   position: fixed;
-  top: 28px;
-  left: clamp(22px, 5vw, 76px);
+  top: 55px;
+  left: 104px;
   z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  transform-origin: -104px -55px;
+  animation: swayTopLeft 12s ease-in-out infinite alternate;
 }
 
 .furin-widget {
   position: relative;
-  width: 54px;
-  height: 132px;
+  width: 64px;
+  height: 145px;
   cursor: pointer;
   outline: none;
-  transform-origin: 50% 0%;
-  animation: furinIdleSway 6.5s ease-in-out infinite alternate;
   filter: drop-shadow(0 8px 16px rgba(14, 26, 48, 0.45));
 }
 
@@ -271,11 +271,12 @@ body.is-loaded .reveal-delay-5 { transition-delay: 0.66s; }
 }
 
 .furin-bell-group {
-  transform-origin: 36px 4px;
+  transform-origin: 42px 12px;
+  animation: furinIdleSway 6.5s ease-in-out infinite alternate;
 }
 
 .furin-tanzaku {
-  transform-origin: 36px 82px;
+  transform-origin: 42px 92px;
   animation: tanzakuFlutter 4.5s ease-in-out infinite alternate;
 }
 
@@ -289,7 +290,7 @@ body.is-loaded .reveal-delay-5 { transition-delay: 0.66s; }
 
 .furin-ripple {
   position: absolute;
-  top: 34px;
+  top: 42px;
   left: 50%;
   width: 34px;
   height: 34px;
@@ -813,7 +814,7 @@ a.inline-entity:hover {
 .polaroid-photo-window {
   position: relative;
   width: 100%;
-  height: 132px;
+  height: 136px;
   border-radius: 7px;
   overflow: hidden;
   background: var(--sky-prussian);
@@ -828,9 +829,12 @@ a.inline-entity:hover {
   pointer-events: none;
 }
 
-.polaroid-bg-layer svg {
+.polaroid-bg-layer svg,
+.polaroid-bg-layer .polaroid-cover-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1170,24 +1174,27 @@ a.inline-entity:hover {
   }
 
   .sakura-corner--top-left {
-    width: 230px;
-    opacity: 0.72;
+    width: 310px;
+    height: auto;
+    opacity: 0.78;
   }
 
   .sakura-corner--bottom-right {
-    width: 240px;
-    opacity: 0.72;
+    width: 320px;
+    height: auto;
+    opacity: 0.78;
   }
 
   .furin-corner-dock {
-    top: 10px;
+    top: 6px;
     left: auto;
-    right: 14px;
+    right: 12px;
+    transform-origin: top right;
   }
 
   .furin-widget {
-    width: 42px;
-    height: 102px;
+    width: 50px;
+    height: 114px;
   }
 
   .lil-me-bubble {
